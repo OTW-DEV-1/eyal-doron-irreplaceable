@@ -150,8 +150,17 @@ export function Cta({ href, children, className = '', variant = 'solid' }: CtaPr
   // Tracking hook: any CTA leading into the checkout funnel gets tagged.
   const tracking = href === CHECKOUT_URL || href === '#price' || href === '#contact' ? ' go_to_checkout' : ''
 
+  // The checkout lives on an external domain — open it in a new tab.
+  const external = href === CHECKOUT_URL
+
   return (
-    <a href={href} data-magnet className={`${base} ${skin} ${className}${tracking}`}>
+    <a
+      href={href}
+      data-magnet
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
+      className={`${base} ${skin} ${className}${tracking}`}
+    >
       {children}
     </a>
   )
