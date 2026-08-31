@@ -43,7 +43,7 @@ export function Header() {
         <a
           href="#price"
           data-magnet
-          className={`${B2C_GRADIENT} inline-block rounded-full px-3 py-[6px] text-[12px] font-semibold text-white transition-[filter,transform] duration-300 hover:text-white hover:brightness-110 sm:justify-self-end sm:px-[26px] sm:py-3 sm:text-[19.4px]`}
+          className={`${B2C_GRADIENT} inline-block rounded-full px-[14px] py-[6px] text-[15px] font-semibold text-white transition-[filter,transform] duration-300 hover:text-white hover:brightness-110 sm:justify-self-end sm:px-[26px] sm:py-3 sm:text-[19.4px]`}
         >
           אני בפנים!
         </a>

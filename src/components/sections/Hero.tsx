@@ -14,12 +14,12 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative z-[5] flex min-h-0 flex-col justify-start overflow-hidden px-4 pt-[63px] pb-14 sm:min-h-screen sm:pt-[120px] sm:pr-[clamp(16px,4.5vw,5em)] sm:pb-10 sm:pl-0"
+      className="relative z-[5] flex min-h-0 flex-col justify-start overflow-hidden px-4 pt-[84px] pb-14 sm:min-h-screen sm:pt-[120px] sm:pr-[clamp(16px,4.5vw,5em)] sm:pb-10 sm:pl-0"
     >
       {/* Mobile-only gradient wash, masked toward the bottom of the section. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 z-0 animate-[b2cGradShift_9s_ease-in-out_infinite_alternate] bg-[linear-gradient(90deg,#725AF6_0%,#E15839_50%,#F6C760_100%)] bg-[length:300%_100%] opacity-40 [mask-image:linear-gradient(180deg,transparent_0%,transparent_50%,rgba(0,0,0,.5)_68%,#000_88%)] sm:hidden"
+        className="pointer-events-none absolute inset-0 z-0 animate-[b2cGradShift_9s_ease-in-out_infinite_alternate] bg-[linear-gradient(90deg,#725AF6_0%,#E15839_50%,#F6C760_100%)] bg-[length:300%_100%] opacity-40 [mask-image:linear-gradient(180deg,transparent_0%,transparent_46%,rgba(0,0,0,.5)_62%,#000_76%,rgba(0,0,0,.55)_90%,transparent_100%)] sm:hidden"
       />
 
       <div className="hidden sm:block">
@@ -45,7 +45,7 @@ export function Hero() {
         <div className="flex flex-col items-center text-center sm:items-start sm:text-right md:-translate-y-[4%]">
           <p
             data-reveal
-            className="mb-0 text-[22.5px] font-normal tracking-[.02em] text-ink-black sm:mb-2 sm:text-[clamp(18px,2.39vw,31.6px)]"
+            className="mb-0 text-[22.5px] font-normal tracking-[.02em] text-ink-black sm:mb-2 sm:text-[clamp(18px,2.39vw,31.6px)] sm:leading-[1.2em]"
           >
             תוכנית חדשה לעולם מסוג חדש.
             <br />
@@ -70,8 +70,7 @@ export function Hero() {
             data-reveal
             className="-mt-1 mb-[10px] w-full max-w-full text-[22.5px] leading-[1.26em] font-normal text-pretty text-ink sm:mt-[14px] sm:mb-0 sm:w-[578px] sm:max-w-[920px] sm:text-[clamp(17.3px,2.19vw,25px)] sm:leading-[1.2em]"
           >
-            התהליך הדיגיטלי והפיזי החדש של ד״ר אייל דורון מחבר
-            <br />
+            התהליך הדיגיטלי והפיזי החדש של ד״ר אייל דורון מחבר <br className="hidden sm:inline" />
             בין רעיונות גדולים לבין החיים עצמם. <br />
             אתם מצטרפים לתהליך המשלב ידע ממגוון עולמות תוכן,
             <br />
@@ -84,21 +83,6 @@ export function Hero() {
                 הצטרפתי - אני בפנים!
               </Cta>
             </div>
-            <a
-              href="#logos"
-              className="relative mt-11 hidden aspect-square w-[clamp(112px,9.5vw,150px)] translate-y-[4.5%] md:block"
-            >
-              <img
-                src={asset('circle-badge.png')}
-                alt=""
-                className="absolute inset-0 h-full w-full animate-[spinSlow_18s_linear_infinite] object-contain"
-              />
-              <img
-                src={asset('scroll-arrow.png')}
-                alt="לסקשן הבא"
-                className="absolute top-1/2 left-1/2 h-[38%] w-[32%] animate-[bobArrow_2.2s_ease-in-out_infinite] object-contain"
-              />
-            </a>
           </div>
         </div>
 

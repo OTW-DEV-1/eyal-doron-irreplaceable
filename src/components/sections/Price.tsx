@@ -57,7 +57,7 @@ export function Price() {
           </div>
           <div>
             <h4 className="mb-1 text-[24px] font-bold sm:text-[clamp(24px,2.9vw,33px)]">הטבה מיוחדת שתגיע עד אליכם</h4>
-            <p className="text-[18px] leading-[1.2em] text-pretty text-ink-black sm:text-[clamp(18px,2.3vw,26.1px)]">
+            <p className="text-[20.7px] leading-[1.2em] text-pretty text-ink-black sm:text-[clamp(18px,2.3vw,26.1px)]">
               קבלת מחברת הקורס המלווה <br className="sm:hidden" />
               עם הספר החדש של ד״ר אייל דורון <br className="sm:hidden" />
               ״יש ממי ללמוד״ בעלות נוספת <br className="sm:hidden" />

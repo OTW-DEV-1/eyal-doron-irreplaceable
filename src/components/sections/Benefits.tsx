@@ -28,7 +28,7 @@ export function Benefits() {
       <h2 data-reveal className="text-headline mb-3 pt-[.12em] pb-[.18em] text-center text-[44px] leading-[0.8em] font-bold sm:text-[clamp(34px,5.6vw,68px)]">
         מה מרוויחים?
       </h2>
-      <p data-reveal className="mb-13 pt-[6px] text-center text-[25.9px] font-semibold text-ink-black sm:text-[clamp(26.4px,3.04vw,35.2px)]">
+      <p data-reveal className="mb-13 pt-[6px] text-center text-[25.9px] leading-[1.2em] font-semibold text-ink-black sm:text-[clamp(26.4px,3.04vw,35.2px)]">
         באנו להכין יחד תוכנית חדשה <br className="sm:hidden" />
         לעולם מסוג חדש.
       </p>
@@ -47,7 +47,7 @@ export function Benefits() {
             >
               {b.num}
             </div>
-            <div className="relative z-[1] pt-[30px] text-center sm:pt-0">
+            <div className="relative z-[1] pt-0 text-center sm:pt-0">
               <h4 className="mb-3 text-[24px] leading-[1.2] font-bold text-ink-black sm:text-[clamp(24px,2.9vw,33px)]">{b.title}</h4>
               <p className="mx-auto max-w-full text-[22.5px] leading-[1.25em] text-pretty text-ink-black sm:max-w-[820px] sm:text-[clamp(20px,2.55vw,29px)]">
                 {b.text}
