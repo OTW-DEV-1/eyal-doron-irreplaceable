@@ -1,6 +1,6 @@
 import { asset } from '@/lib/assets'
 import { Aurora } from '@/components/reactbits/Aurora'
-import { CARD, Cta, GradientIcon, ICONS } from '@/components/ui'
+import { CHECKOUT_URL, CARD, Cta, GradientIcon, ICONS } from '@/components/ui'
 
 const PULSE =
   'absolute rounded-full bg-[linear-gradient(90deg,rgba(114,90,246,0),#725AF6_35%,#E15839_50%,#F6C760_65%,rgba(246,199,96,0))] shadow-[0_0_18px_rgba(225,88,57,1),0_0_40px_rgba(225,88,57,.75)]'
@@ -110,7 +110,7 @@ export function More() {
         </div>
       </div>
       <div data-reveal data-reveal-early className="mt-11 text-center">
-        <Cta href="#price" className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-4 sm:text-[21.3px]">
+        <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-4 sm:text-[21.3px]">
           הנה - הצטרפתי
         </Cta>
       </div>

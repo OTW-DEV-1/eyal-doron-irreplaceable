@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Cta } from '@/components/ui'
+import { CHECKOUT_URL, Cta } from '@/components/ui'
 
 const VIMEO_ID = '1219221055'
 const VIMEO_HASH = '2dba3f212d'
@@ -41,7 +41,7 @@ export function IntroVideo() {
           <span className="text-b2c">מיוחד לאנשים פרטיים.</span>
         </p>
         <div className="mt-8 hidden pt-5 sm:block">
-          <Cta href="#price" className="px-10 py-4 text-[21.5px]">
+          <Cta href={CHECKOUT_URL} className="px-10 py-4 text-[21.5px]">
             אני רוצה לצאת לדרך!
           </Cta>
         </div>

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { CARD, Cta, GradientIcon, ICON_CHIP, ICONS } from '@/components/ui'
+import { CHECKOUT_URL, CARD, Cta, GradientIcon, ICON_CHIP, ICONS } from '@/components/ui'
 
 const ROWS: { icon: keyof typeof ICONS; full?: boolean; text: ReactNode }[] = [
   {
@@ -59,7 +59,7 @@ export function How() {
         ))}
       </div>
       <div data-reveal data-reveal-early className="mt-11 text-center">
-        <Cta href="#price" className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-4 sm:text-[21.3px]">
+        <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-4 sm:text-[21.3px]">
           יוצאים לדרך!
         </Cta>
       </div>

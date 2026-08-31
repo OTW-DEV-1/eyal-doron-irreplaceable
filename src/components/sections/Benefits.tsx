@@ -1,4 +1,4 @@
-import { CARD, Cta } from '@/components/ui'
+import { CHECKOUT_URL, CARD, Cta } from '@/components/ui'
 
 const BENEFITS = [
   { num: '01', title: 'כלים משני חשיבה', text: 'ליישום ולפתרון בעיות ביום-יום, בחיים ובעבודה.' },
@@ -63,7 +63,7 @@ export function Benefits() {
         סדנה שבה הכל מתחבר, כולנו נפגשים, מדייקים ומתניעים את תוכנית הפעולה האישית שלנו.
       </p>
       <div data-reveal data-reveal-early className="mt-12 text-center">
-        <Cta href="#price" className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-4 sm:text-[21.3px]">
+        <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-4 sm:text-[21.3px]">
           הנה הצטרפתי!
         </Cta>
       </div>

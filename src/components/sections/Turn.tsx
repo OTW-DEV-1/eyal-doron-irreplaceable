@@ -1,6 +1,6 @@
 import { asset } from '@/lib/assets'
 import { Aurora } from '@/components/reactbits/Aurora'
-import { Cta } from '@/components/ui'
+import { CHECKOUT_URL, Cta } from '@/components/ui'
 
 /** Big statement break: aurora + photographic texture behind a single headline. */
 export function Turn() {
@@ -26,7 +26,7 @@ export function Turn() {
         <span className="text-b2c">להתהפך עליו בחזרה.</span>
       </h2>
       <div data-reveal data-reveal-early className="relative z-[1] mt-10">
-        <Cta href="#price" className="px-[22px] py-3 text-[20.7px] sm:px-11 sm:py-4 sm:text-[22px]">
+        <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-11 sm:py-4 sm:text-[22px]">
           אני רוצה להתהפך עליו בחזרה!
         </Cta>
       </div>

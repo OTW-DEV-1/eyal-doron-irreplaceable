@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { asset } from '@/lib/assets'
-import { B2C_GRADIENT } from '@/components/ui'
+import { CHECKOUT_URL, B2C_GRADIENT } from '@/components/ui'
 
 const LINKS = [
   { href: '#benefits', label: 'מה מרוויחים' },
@@ -41,7 +41,7 @@ export function Header() {
           ))}
         </nav>
         <a
-          href="#price"
+          href={CHECKOUT_URL}
           data-magnet
           className={`${B2C_GRADIENT} inline-block rounded-full px-[14px] py-[6px] text-[15px] font-semibold text-white transition-[filter,transform] duration-300 hover:text-white hover:brightness-110 sm:justify-self-end sm:px-[26px] sm:py-3 sm:text-[19.4px]`}
         >
@@ -75,7 +75,7 @@ export function Header() {
           </a>
         ))}
         <a
-          href="#price"
+          href={CHECKOUT_URL}
           onClick={close}
           className={`${B2C_GRADIENT} mt-auto rounded-full px-[26px] py-[13px] text-center text-[18px] font-semibold text-white`}
         >

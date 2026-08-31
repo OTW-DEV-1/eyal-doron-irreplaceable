@@ -1,5 +1,5 @@
 import { Aurora } from '@/components/reactbits/Aurora'
-import { Cta } from '@/components/ui'
+import { CHECKOUT_URL, Cta } from '@/components/ui'
 
 /** Closing message + personal quote card over a soft aurora. */
 export function Closing() {
@@ -30,7 +30,7 @@ export function Closing() {
             <p className="mt-[14px] text-[26px] font-bold text-ink-gray">אייל</p>
           </div>
           <div data-reveal data-reveal-early className="mt-[6px]">
-            <Cta href="#contact" className="px-[22px] py-3 text-[20.7px] sm:px-[46px] sm:py-[17px] sm:text-[22.5px]">
+            <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[46px] sm:py-[17px] sm:text-[22.5px]">
               אני רוצה לצאת לדרך!
             </Cta>
           </div>

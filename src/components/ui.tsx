@@ -154,6 +154,9 @@ export function Cta({ href, children, className = '', variant = 'solid' }: CtaPr
   )
 }
 
+/** Every CTA on the page leads straight to the course checkout. */
+export const CHECKOUT_URL = 'https://eyaldoron-course.co.il/checkout/?add-to-cart=8845&quantity=1'
+
 /** The site's recurring light card: warm white gradient, hairline white border. */
 export const CARD = 'bg-[linear-gradient(160deg,#FFFFFF_0%,#EFEEEB_100%)] border border-white'
 

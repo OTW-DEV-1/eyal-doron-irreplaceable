@@ -1,5 +1,5 @@
 import { Aurora } from '@/components/reactbits/Aurora'
-import { Cta } from '@/components/ui'
+import { CHECKOUT_URL, Cta } from '@/components/ui'
 
 /** Outlined keyword floating behind the copy. */
 function Ghost({ className, children }: { className: string; children: string }) {
@@ -43,7 +43,7 @@ export function Problem() {
             ולא-לינארי, ולייצר לעצמנו ובסביבתנו: חיים של הפתעה עצמית.
           </p>
           <div data-reveal data-reveal-early className="mt-2">
-            <Cta href="#price" className="px-[22px] py-3 text-[20.7px] sm:px-11 sm:py-4 sm:text-[21.3px]">
+            <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-11 sm:py-4 sm:text-[21.3px]">
               הצטרפתי - אני בפנים!
             </Cta>
           </div>

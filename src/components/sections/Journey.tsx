@@ -1,5 +1,5 @@
 import { Aurora } from '@/components/reactbits/Aurora'
-import { Cta } from '@/components/ui'
+import { CHECKOUT_URL, Cta } from '@/components/ui'
 
 const STEPS = [
   'דיוק עצמי ופוקוס ברמה חדשה לגמרי',
@@ -85,7 +85,7 @@ export function Journey() {
             })}
           </div>
           <div data-reveal data-reveal-early className="-mt-[15px] text-center sm:mt-9">
-            <Cta href="#price" className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-[15px] sm:text-[21.3px]">
+            <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-[15px] sm:text-[21.3px]">
               אני רוצה לצאת לדרך!
             </Cta>
           </div>
