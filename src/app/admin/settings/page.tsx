@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 }
 
 const ENV_TO = process.env.CONTACT_TO_EMAIL
-const ENV_ZAPIER = process.env.ZAPIER_WEBHOOK_URL
 
 const ERROR_MESSAGES: Record<string, string> = {
   webhook: 'כתובת ה-Webhook חייבת להתחיל ב-https://',
@@ -69,14 +68,13 @@ export default async function SettingsPage({
           <label className="mb-6 block">
             <span className="mb-1 block font-semibold text-ink">Zapier Webhook URL</span>
             <span className="mb-2 block text-sm text-gray-body">
-              כל פנייה מהאתר נשלחת לכתובת הזו. ריק = ברירת המחדל מהסביבה
-              {ENV_ZAPIER ? '' : ' (לא מוגדרת כרגע)'}.
+              כל פנייה מהאתר נשלחת לכתובת הזו. ריק = לא נשלח Webhook כלל.
             </span>
             <input
               type="url"
               name="zapier_webhook_url"
               defaultValue={settings.zapier_webhook_url}
-              placeholder={ENV_ZAPIER ?? 'https://hooks.zapier.com/hooks/catch/…'}
+              placeholder="https://hooks.zapier.com/hooks/catch/…"
               dir="ltr"
               className="w-full rounded-lg border border-ink/15 px-4 py-3 text-ink outline-none focus:border-brand-violet"
             />

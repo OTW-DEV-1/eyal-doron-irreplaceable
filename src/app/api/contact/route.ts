@@ -7,9 +7,8 @@ export const runtime = 'nodejs'
 
 const FROM = process.env.CONTACT_FROM_EMAIL
 const API_KEY = process.env.RESEND_API_KEY
-/** Fallbacks when /admin/settings has no value stored. */
+/** Fallback when /admin/settings has no value stored. */
 const ENV_TO = process.env.CONTACT_TO_EMAIL
-const ENV_ZAPIER_WEBHOOK_URL = process.env.ZAPIER_WEBHOOK_URL
 
 type Payload = {
   fullname?: unknown
@@ -107,7 +106,9 @@ export async function POST(req: Request) {
   // Admin-editable overrides; if Supabase is down we fall back to env so the
   // form keeps working.
   const overrides = await getSettings().catch(() => EMPTY_SETTINGS)
-  const webhookUrl = overrides.zapier_webhook_url || ENV_ZAPIER_WEBHOOK_URL
+  // The webhook has no env fallback on purpose: leads are relayed only when an
+  // admin has entered a URL at /admin/settings.
+  const webhookUrl = overrides.zapier_webhook_url
   const to = overrides.contact_to_email || ENV_TO
 
   // Relay to Zapier, Resend, and the Supabase leads table in parallel. The
@@ -119,17 +120,16 @@ export async function POST(req: Request) {
     saveLead({ fullname, email, phone, message, updates, source }),
   ])
 
-  if (!zapierOk && !emailOk && !dbOk) {
+  // An unconfigured webhook is not a failure — only a configured one that fails.
+  if (zapierOk !== true && !emailOk && !dbOk) {
     return NextResponse.json({ error: 'send_failed' }, { status: 502 })
   }
   return NextResponse.json({ ok: true })
 }
 
+/** Returns null when no webhook is configured, otherwise whether the relay succeeded. */
 async function sendToZapier(webhookUrl: string | undefined, lead: Record<string, string>) {
-  if (!webhookUrl) {
-    console.error('Zapier relay is not configured: ZAPIER_WEBHOOK_URL or /admin/settings')
-    return false
-  }
+  if (!webhookUrl) return null
   try {
     const res = await fetch(webhookUrl, {
       method: 'POST',

@@ -3,12 +3,13 @@ import { supabaseServer } from './supabase-server'
 /**
  * Site settings editable at /admin/settings, stored in the Supabase
  * `b2c_settings` table (see supabase/migrations). The Supabase project is
- * shared with the Supertalent site, hence the b2c_ prefix. An empty value
- * means "use the env fallback".
+ * shared with the Supertalent site, hence the b2c_ prefix. An empty
+ * contact_to_email means "use the env fallback"; an empty zapier_webhook_url
+ * means no webhook is sent at all.
  */
 const TABLE = 'b2c_settings'
 export type SiteSettings = {
-  /** Zapier catch hook that receives every lead. */
+  /** Zapier catch hook that receives every lead. Empty = no webhook is sent. */
   zapier_webhook_url: string
   /** Where lead notification emails go; comma-separated list allowed. */
   contact_to_email: string
