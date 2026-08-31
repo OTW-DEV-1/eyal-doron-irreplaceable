@@ -5,7 +5,17 @@ import { asset } from '@/lib/assets'
 import { CARD } from '@/components/ui'
 
 /** Two copies of this sequence make the strip loop seamlessly at the halfway point. */
-const SEQUENCE = ['gallery-1', 'gallery-2', 'gallery-3', 'gallery-4', 'gallery-5', 'gallery-3']
+const SEQUENCE = [
+  'gallery-1',
+  'gallery-2',
+  'gallery-3',
+  'gallery-4',
+  'gallery-5',
+  'gallery-6',
+  'gallery-7',
+  'gallery-8',
+  'gallery-9',
+]
 
 /**
  * Course-experience gallery: an endlessly drifting horizontal strip whose cards
@@ -93,7 +103,7 @@ export function Gallery() {
               className={`${CARD} aspect-[3/4] w-[58vw] flex-none overflow-hidden rounded-3xl shadow-[0_18px_44px_rgba(20,19,24,.12)] will-change-transform sm:w-[clamp(240px,25vw,350px)]`}
             >
               <img
-                src={asset(`gallery/${img}.png`)}
+                src={asset(`gallery/${img}.webp`)}
                 alt="מתוך חוויית הקורס"
                 draggable={false}
                 className="pointer-events-none block h-full w-full object-cover"
