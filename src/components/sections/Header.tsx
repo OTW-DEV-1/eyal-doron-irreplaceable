@@ -43,7 +43,7 @@ export function Header() {
         <a
           href={CHECKOUT_URL}
           data-magnet
-          className={`${B2C_GRADIENT} inline-block rounded-full px-[14px] py-[6px] text-[15px] font-semibold text-white transition-[filter,transform] duration-300 hover:text-white hover:brightness-110 sm:justify-self-end sm:px-[26px] sm:py-3 sm:text-[19.4px]`}
+          className={`${B2C_GRADIENT} go_to_checkout inline-block rounded-full px-[14px] py-[6px] text-[15px] font-semibold text-white transition-[filter,transform] duration-300 hover:text-white hover:brightness-110 sm:justify-self-end sm:px-[26px] sm:py-3 sm:text-[19.4px]`}
         >
           אני בפנים!
         </a>
@@ -77,7 +77,7 @@ export function Header() {
         <a
           href={CHECKOUT_URL}
           onClick={close}
-          className={`${B2C_GRADIENT} mt-auto rounded-full px-[26px] py-[13px] text-center text-[18px] font-semibold text-white`}
+          className={`${B2C_GRADIENT} go_to_checkout mt-auto rounded-full px-[26px] py-[13px] text-center text-[18px] font-semibold text-white`}
         >
           אני בפנים!
         </a>
