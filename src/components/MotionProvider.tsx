@@ -86,7 +86,10 @@ export function MotionProvider() {
               clamp01((vh * 0.98 - r.bottom) / (vh * 0.18)),
               endBoost,
             )
-        const exit = clamp01(r.bottom / (vh * 0.22))
+        // Near the top of the page there is nowhere to have scrolled from, so
+        // the exit fade must not apply — otherwise content that naturally sits
+        // just under the fixed header gets nudged up underneath it.
+        const exit = Math.max(clamp01(r.bottom / (vh * 0.22)), clamp01(1 - sy / (vh * 0.3)))
         const p = Math.min(enter, exit)
 
         // Once an element is settled, stop re-writing identical styles.
