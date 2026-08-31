@@ -148,7 +148,7 @@ export function Cta({ href, children, className = '', variant = 'solid' }: CtaPr
       : 'bg-page-alt text-ink border-[1.5px] border-ink hover:bg-ink hover:text-white'
 
   // Tracking hook: any CTA leading into the checkout funnel gets tagged.
-  const tracking = href === '#price' || href === '#contact' ? ' go_to_checkout' : ''
+  const tracking = href === CHECKOUT_URL || href === '#price' || href === '#contact' ? ' go_to_checkout' : ''
 
   return (
     <a href={href} data-magnet className={`${base} ${skin} ${className}${tracking}`}>
