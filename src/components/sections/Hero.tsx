@@ -45,7 +45,7 @@ export function Hero() {
         <div className="flex flex-col items-center text-center sm:items-start sm:text-right md:-translate-y-[4%]">
           <p
             data-reveal
-            className="mb-0 text-[22.5px] font-normal tracking-[.02em] text-ink-black sm:mb-2 sm:text-[clamp(18px,2.39vw,31.6px)] sm:leading-[1.2em]"
+            className="mb-0 text-[22.5px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mb-2 sm:text-[clamp(18px,2.39vw,31.6px)] sm:leading-[1.2em]"
           >
             תוכנית חדשה לעולם מסוג חדש.
             <br />
