@@ -69,7 +69,7 @@ export function Contact() {
                 type="submit"
                 data-magnet
                 disabled={status === 'sending'}
-                className={`${B2C_GRADIENT} block w-full cursor-pointer rounded-full border-none px-5 py-[14px] text-[26px] font-semibold text-white transition-[filter,transform] duration-300 hover:brightness-110 disabled:opacity-80 sm:w-auto sm:px-11 sm:py-[15px]`}
+                className={`${B2C_GRADIENT} submit_btn block w-full cursor-pointer rounded-full border-none px-5 py-[14px] text-[26px] font-semibold text-white transition-[filter,transform] duration-300 hover:brightness-110 disabled:opacity-80 sm:w-auto sm:px-11 sm:py-[15px]`}
               >
                 {status === 'sent' ? 'נשלח ✓' : status === 'sending' ? 'שולח...' : 'דברו איתי'}
               </button>
