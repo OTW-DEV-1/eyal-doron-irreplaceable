@@ -41,24 +41,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Desktop-only "start here" badge, pinned to the section so it never
-          nudges the hero copy: the ring spins gently, the arrow floats inside. */}
-      <a
-        href="#logos"
-        className="absolute right-[4.5%] bottom-[55px] z-[3] hidden aspect-square w-[clamp(112px,9.5vw,150px)] md:block [@media(max-height:800px)]:!hidden [@media(max-width:1100px)]:!hidden"
-      >
-        <img
-          src={asset('circle-badge.png')}
-          alt=""
-          className="absolute inset-0 h-full w-full animate-[spinSlow_18s_linear_infinite] object-contain"
-        />
-        <img
-          src={asset('scroll-arrow.png')}
-          alt="לסקשן הבא"
-          className="absolute top-1/2 left-1/2 h-[38%] w-[32%] animate-[bobArrow_2.2s_ease-in-out_infinite] object-contain"
-        />
-      </a>
-
       <div className="relative z-[2] grid w-full grid-cols-1 items-start gap-6 sm:pt-[8vh] md:grid-cols-[1.05fr_.95fr] md:gap-14">
         <div className="flex flex-col items-center text-center sm:items-start sm:text-right md:-translate-y-[4%]">
           <div data-reveal className="mt-[10px] sm:mt-0">
@@ -92,6 +74,24 @@ export function Hero() {
                 אני רוצה לצאת לדרך!
               </Cta>
             </div>
+            {/* Desktop "start here" badge: in normal flow so it always sits
+                below the CTA at every size, even past the first viewport.
+                The ring spins gently, the arrow floats inside. */}
+            <a
+              href="#logos"
+              className="relative mt-8 hidden aspect-square w-[clamp(112px,9.5vw,150px)] -translate-x-[40%] self-start md:block"
+            >
+              <img
+                src={asset('circle-badge.png')}
+                alt=""
+                className="absolute inset-0 h-full w-full animate-[spinSlow_18s_linear_infinite] object-contain"
+              />
+              <img
+                src={asset('scroll-arrow.png')}
+                alt="לסקשן הבא"
+                className="absolute top-1/2 left-1/2 h-[38%] w-[32%] animate-[bobArrow_2.2s_ease-in-out_infinite] object-contain"
+              />
+            </a>
           </div>
         </div>
 
