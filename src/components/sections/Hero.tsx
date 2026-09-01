@@ -45,7 +45,7 @@ export function Hero() {
           nudges the hero copy: the ring spins gently, the arrow floats inside. */}
       <a
         href="#logos"
-        className="absolute right-[4.5%] bottom-[55px] z-[3] hidden aspect-square w-[clamp(112px,9.5vw,150px)] md:block"
+        className="absolute right-[4.5%] bottom-[55px] z-[3] hidden aspect-square w-[clamp(112px,9.5vw,150px)] md:block [@media(max-height:800px)]:!hidden [@media(max-width:1100px)]:!hidden"
       >
         <img
           src={asset('circle-badge.png')}
@@ -78,7 +78,7 @@ export function Hero() {
             data-reveal
             className="mt-5 w-full max-w-full pb-[10px] text-[22.5px] leading-[1.1em] font-semibold text-pretty text-ink sm:mt-10 sm:w-auto sm:max-w-[945px] sm:pb-0 sm:text-[clamp(22.5px,2.97vw,33.7px)] sm:leading-[1.05em]"
           >
-            הקורס הדיגיטלי-פיזי החדש של ד״ר אייל דורון
+            הקורס הדיגיטלי-פיזי החדש <span className="whitespace-nowrap">של ד״ר אייל דורון</span>
           </p>
           <p
             data-reveal

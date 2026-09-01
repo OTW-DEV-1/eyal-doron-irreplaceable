@@ -8,7 +8,7 @@ const TOP = ['image1', 'image2', 'image3', 'image4', 'image5']
 const BOTTOM = ['image6', 'image7', 'image8', 'image9', 'image10', 'image11', 'image12', 'image13']
 
 /** Marquee speed in px per frame; matched across both rows. */
-const SPEED = 0.4
+const SPEED = 0.55
 
 /** Soft fade toward both side edges of each row. */
 const EDGE_FADE = 'linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent)'

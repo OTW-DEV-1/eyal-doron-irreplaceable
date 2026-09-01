@@ -29,8 +29,9 @@ export function About() {
           <h2 className="text-headline mb-[10px] pt-[.12em] pb-[.18em] text-[44px] leading-[0.8em] font-bold sm:text-[clamp(34px,5.6vw,68px)]">
             ד״ר אייל דורון
           </h2>
-          <p className="text-b2c mb-6 text-[clamp(20px,2.2vw,27px)] font-semibold">
-            הקול המוביל בישראל לפיתוח חשיבה יצירתית.
+          <p className="text-b2c mb-6 text-[24px] leading-[1.2em] font-semibold sm:text-[clamp(20px,2.2vw,27px)]">
+            הקול המוביל בישראל <br className="sm:hidden" />
+            לפיתוח חשיבה יצירתית.
           </p>
           <p className="text-[22.5px] leading-[1.2em] text-pretty text-ink-black sm:text-[clamp(20px,2.55vw,29px)]">
             דורון חקר בפוסט-דוקטורט שלו מודלים לפיתוח גמישות מחשבתית בקרב ילדים ובני-נוער. הוא יועץ ומלווה אסטרטגית

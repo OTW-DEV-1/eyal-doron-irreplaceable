@@ -47,9 +47,12 @@ export function CurvedLoop({
     let visible = false
 
     const tick = (now: number) => {
+      // Increasing startOffset slides the text left-to-right; keeping the
+      // value in [-repLen, 0) leaves a full repetition before the path start
+      // so the left edge never runs out of glyphs.
       off = (off + speed * ((now - last) / 1000)) % repLen
       last = now
-      tpRef.current?.setAttribute('startOffset', String(-off))
+      tpRef.current?.setAttribute('startOffset', String(off - repLen))
       raf = requestAnimationFrame(tick)
     }
 

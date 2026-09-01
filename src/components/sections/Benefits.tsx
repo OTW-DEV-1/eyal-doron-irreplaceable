@@ -8,7 +8,7 @@ const BENEFITS: { num: string; text: ReactNode }[] = [
   { num: '04', text: (<><strong>פיתוח וחידוד מיומנויות</strong> חשיבה יצירתית והתמודדות עם שינוי</>) },
   {
     num: '05',
-    text: (<><strong>להגדיר במה אני הכי מעולה בעולם</strong><br />- והיכולת לפעול ממנו באופן אינטואיטיבי, משמח ומצליח יותר</>),
+    text: (<><strong>להגדיר במה אני הכי מעולה בעולם</strong><br />והיכולת לפעול באופן אינטואיטיבי, משמח ומצליח יותר</>),
   },
   {
     num: '06',
@@ -20,7 +20,7 @@ const BENEFITS: { num: string; text: ReactNode }[] = [
       </>
     ),
   },
-  { num: '07', text: (<><strong>הכרות עם הספרים שבאמת שינו את העולם</strong><br />ומאז הכל זה הערות שוליים...</>) },
+  { num: '07', text: (<><strong>היכרות עם הספרים שבאמת שינו את העולם</strong><br />ומאז הכל זה הערות שוליים...</>) },
   { num: '08', text: (<><strong>חיבורים</strong> לאנשים מרתקים, <strong>הזדמנויות</strong> חדשות ורשת תומכת של אנשים</>) },
 ]
 
@@ -35,7 +35,7 @@ export function Benefits() {
         Quick Wins
       </h2>
       <p data-reveal className="mb-13 pt-[6px] text-center text-[25.9px] leading-[1.2em] font-semibold text-ink-black sm:text-[clamp(26.4px,3.04vw,35.2px)]">
-        באנו להבין יחד תוכנית חדשה <br className="sm:hidden" />
+        באנו להכין יחד תוכנית חדשה <br className="sm:hidden" />
         לעולם מסוג חדש.
       </p>
 

@@ -7,7 +7,7 @@ import { CHECKOUT_URL, B2C_GRADIENT } from '@/components/ui'
 const LINKS = [
   { href: '#journey', label: 'התהליך' },
   { href: '#how', label: 'איך זה עובד?' },
-  { href: '#benefits', label: 'Quick wins' },
+  { href: '#benefits', label: 'Quick Wins' },
   { href: '#about', label: 'ד״ר אייל דורון' },
   { href: '#voices', label: 'המלצות' },
   { href: '#faq', label: 'שאלות ותשובות' },
