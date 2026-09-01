@@ -70,7 +70,7 @@ export function Hero() {
           </div>
           <p
             data-reveal
-            className="mt-2 mb-0 text-[22.5px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mt-3 sm:mb-0 sm:text-[clamp(23.8px,3.16vw,41.8px)] sm:leading-[1.2em]"
+            className="mt-2 mb-0 text-[24.8px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mt-3 sm:mb-0 sm:text-[clamp(22.6px,3vw,39.7px)] sm:leading-[1.2em]"
           >
             תוכנית פעולה חדשה לעולם מסוג חדש
           </p>

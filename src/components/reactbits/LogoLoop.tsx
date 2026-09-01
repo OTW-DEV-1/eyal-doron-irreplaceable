@@ -13,8 +13,10 @@ type LogoLoopProps = {
 const MASK = 'linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)'
 
 /**
- * Seamless marquee. The row is rendered twice and translated -50%, so the
- * second copy lands exactly where the first started.
+ * Seamless marquee. The row is rendered four times and translated -50% (two
+ * full sets), so a short set still covers the widest screens with no gaps
+ * while the loop point stays invisible. The duration is doubled internally so
+ * the on-screen speed matches the original two-copy version.
  */
 export function LogoLoop({ children, gap = 56, duration = 26, reverse = false, fade = true }: LogoLoopProps) {
   const row = (key: string, hide: boolean) => (
@@ -48,11 +50,13 @@ export function LogoLoop({ children, gap = 56, duration = 26, reverse = false, f
           display: 'flex',
           width: 'max-content',
           direction: 'ltr',
-          animation: `rbLoop ${duration}s linear infinite${reverse ? ' reverse' : ''}`,
+          animation: `rbLoop ${duration * 2}s linear infinite${reverse ? ' reverse' : ''}`,
         }}
       >
         {row('a', false)}
         {row('b', true)}
+        {row('c', true)}
+        {row('d', true)}
       </div>
     </div>
   )
