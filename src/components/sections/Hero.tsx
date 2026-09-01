@@ -61,14 +61,8 @@ export function Hero() {
 
       <div className="relative z-[2] grid w-full grid-cols-1 items-start gap-6 sm:pt-[8vh] md:grid-cols-[1.05fr_.95fr] md:gap-14">
         <div className="flex flex-col items-center text-center sm:items-start sm:text-right md:-translate-y-[4%]">
-          <p
-            data-reveal
-            className="mt-[10px] mb-0 text-[22.5px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mt-0 sm:mb-2 sm:text-[clamp(23.8px,3.16vw,41.8px)] sm:leading-[1.2em]"
-          >
-            תוכנית פעולה חדשה לעולם מסוג חדש
-          </p>
-          <div data-reveal>
-            <h1 className="text-headline pt-0 pb-[.06em] text-[min(63.75px,16.15vw)] leading-[0.9] font-bold sm:h-[146px] sm:pt-[.04em] sm:text-[clamp(51.8px,9.15vw,119.6px)] sm:leading-[0.8em]">
+          <div data-reveal className="mt-[10px] sm:mt-0">
+            <h1 className="text-headline pt-0 pb-[.06em] text-[min(63.75px,16.15vw)] leading-[0.9] font-bold sm:pt-[.04em] sm:text-[clamp(51.8px,9.15vw,119.6px)] sm:leading-[0.8em]">
               הבלתי-ניתנים
               <br />
               <span className="text-b2c">להחלפה</span>
@@ -76,7 +70,13 @@ export function Hero() {
           </div>
           <p
             data-reveal
-            className="mt-5 w-full max-w-full pb-[10px] text-[22.5px] leading-[1.1em] font-semibold text-pretty text-ink sm:mt-20 sm:w-auto sm:max-w-[945px] sm:pb-0 sm:text-[clamp(22.5px,2.97vw,33.7px)] sm:leading-[1.05em]"
+            className="mt-2 mb-0 text-[22.5px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mt-3 sm:mb-0 sm:text-[clamp(23.8px,3.16vw,41.8px)] sm:leading-[1.2em]"
+          >
+            תוכנית פעולה חדשה לעולם מסוג חדש
+          </p>
+          <p
+            data-reveal
+            className="mt-5 w-full max-w-full pb-[10px] text-[22.5px] leading-[1.1em] font-semibold text-pretty text-ink sm:mt-10 sm:w-auto sm:max-w-[945px] sm:pb-0 sm:text-[clamp(22.5px,2.97vw,33.7px)] sm:leading-[1.05em]"
           >
             הקורס הדיגיטלי-פיזי החדש של ד״ר אייל דורון
           </p>
