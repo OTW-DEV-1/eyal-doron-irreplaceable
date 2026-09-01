@@ -12,15 +12,16 @@ export function Process() {
             הבלתי-ניתנים להחלפה
           </h2>
           <div className="h-9" />
-          <div data-reveal className="mx-auto max-w-[1000px] text-center">
-            <p className="text-[22.5px] leading-[1.3em] text-pretty text-on-dark sm:text-[clamp(20px,2.55vw,29px)]">
+          <div data-reveal className="mx-auto max-w-[1240px] text-center">
+            <p className="text-[22.5px] leading-[1.3em] text-pretty text-on-dark sm:text-[clamp(18px,2.05vw,24px)]">
               תהליך דיגיטלי-פיזי חדש המשלב ידע תיאורטי וניסיון של שנים בעבודה בשטח.
               <br />
               מסלול ייחודי של ידע והשראה ממגוון עולמות, מודלים ומחקר, תובנות מפילות אסימונים וכלים מעשיים ליישום.
             </p>
-            <p className="mt-6 text-[22.5px] leading-[1.3em] text-pretty text-on-dark sm:text-[clamp(20px,2.55vw,29px)]">
-              שיעורים מצולמים, חומרים מקוריים לתרגול, קהילת עבודה משותפת, ליווי אישי של מנחה, צ׳ט-בוט מיוחד להתייעצות
-              וסדנת סיום פיסית.
+            <p className="mt-6 text-[22.5px] leading-[1.3em] text-pretty text-on-dark sm:text-[clamp(18px,2.05vw,24px)]">
+              שיעורים מצולמים, חומרים מקוריים לתרגול, קהילת עבודה משותפת, ליווי אישי של מנחה,
+              <br className="hidden sm:inline" />
+              {' '}צ׳ט-בוט מיוחד להתייעצות וסדנת סיום פיסית.
               <br />
               הרעיון הוא לא רק לחשוב אחרת, אלא לקחת את החשיבה הזאת לחיים ולעבודה ולתרגם אותה לאסטרטגיה ולתוכנית פעולה
               מעשית משלכם.

@@ -25,7 +25,7 @@ export function About() {
             className="static mx-auto block h-auto w-full max-w-[440px] sm:absolute sm:right-10 sm:bottom-0 sm:mx-0 sm:w-[118%] sm:max-w-[780px]"
           />
         </div>
-        <div data-reveal className="relative z-[30] mr-0 text-center sm:mr-[clamp(60px,9vw,180px)] sm:text-right">
+        <div data-reveal className="relative z-[30] mr-0 text-center sm:mr-[clamp(20px,4.5vw,90px)] sm:ml-[clamp(40px,4.5vw,90px)] sm:text-right">
           <h2 className="text-headline mb-[10px] pt-[.12em] pb-[.18em] text-[44px] leading-[0.8em] font-bold sm:text-[clamp(34px,5.6vw,68px)]">
             ד״ר אייל דורון
           </h2>

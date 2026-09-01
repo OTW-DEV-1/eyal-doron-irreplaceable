@@ -39,7 +39,7 @@ export function Logos() {
       <div className="relative z-[1] w-full text-center">
         <p
           data-reveal
-          className="mx-auto mb-11 px-5 pb-[10px] text-center text-[25px] leading-[1.27em] font-bold whitespace-normal text-ink sm:pb-7 sm:text-[clamp(18px,2.75vw,45px)] sm:leading-normal sm:whitespace-nowrap"
+          className="mx-auto mb-11 px-5 pb-[10px] text-center text-[25px] leading-[1.27em] font-bold whitespace-normal text-ink sm:pb-7 sm:text-[clamp(18px,2.75vw,45px)] sm:leading-[1.25em] sm:whitespace-nowrap"
         >
           במשך שנים מלווה ד״ר אייל דורון יזמים, ארגונים, הנהלות בכירות, מובילי חינוך ומשרדי ממשלה <br className="hidden sm:inline" />
           באסטרטגיה יצירתית, בפיתוח טלנטים ודור עתיד וחתירה להישגי שיא בעולם של חוסר ודאות.

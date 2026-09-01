@@ -14,7 +14,8 @@ export function Closing() {
             className="text-headline w-full self-center pt-[.12em] pb-[.12em] text-center text-[42px] leading-[0.9em] font-bold whitespace-normal sm:w-[96vw] sm:text-[clamp(24px,4.4vw,68px)] sm:whitespace-nowrap"
           >
             תפסיקו לנסות להתכונן לעתיד, <br />
-            תתחילו ליצור אותו. <span className="text-b2c">עתיד מקורי ומפתיע</span>
+            תתחילו ליצור אותו. <br />
+            <span className="text-b2c">עתיד מקורי ומפתיע</span>
           </h2>
           <div
             data-reveal

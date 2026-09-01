@@ -45,12 +45,12 @@ export function Hero() {
         <div className="flex flex-col items-center text-center sm:items-start sm:text-right md:-translate-y-[4%]">
           <p
             data-reveal
-            className="mb-0 text-[22.5px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mb-2 sm:text-[clamp(18px,2.39vw,31.6px)] sm:leading-[1.2em]"
+            className="mb-0 text-[22.5px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mb-2 sm:text-[clamp(23.8px,3.16vw,41.8px)] sm:leading-[1.2em]"
           >
             תוכנית פעולה חדשה לעולם מסוג חדש
           </p>
           <div data-reveal>
-            <h1 className="text-headline pt-0 pb-[.06em] text-[min(63.75px,16.15vw)] leading-[0.9] font-bold sm:h-[127px] sm:pt-[.04em] sm:text-[clamp(45px,7.96vw,104px)] sm:leading-[0.8em]">
+            <h1 className="text-headline pt-0 pb-[.06em] text-[min(63.75px,16.15vw)] leading-[0.9] font-bold sm:h-[146px] sm:pt-[.04em] sm:text-[clamp(51.8px,9.15vw,119.6px)] sm:leading-[0.8em]">
               הבלתי-ניתנים
               <br />
               <span className="text-b2c">להחלפה</span>
@@ -58,19 +58,19 @@ export function Hero() {
           </div>
           <p
             data-reveal
-            className="mt-5 w-full max-w-full pb-[10px] text-[22.5px] leading-[1.1em] font-semibold text-pretty text-ink sm:mt-20 sm:w-auto sm:max-w-[945px] sm:pb-0 sm:text-[clamp(19.6px,2.58vw,29.3px)] sm:leading-[1.05em]"
+            className="mt-5 w-full max-w-full pb-[10px] text-[22.5px] leading-[1.1em] font-semibold text-pretty text-ink sm:mt-20 sm:w-auto sm:max-w-[945px] sm:pb-0 sm:text-[clamp(22.5px,2.97vw,33.7px)] sm:leading-[1.05em]"
           >
             הקורס הדיגיטלי-פיזי החדש של ד״ר אייל דורון
           </p>
           <p
             data-reveal
-            className="-mt-1 mb-[10px] w-full max-w-full text-[22.5px] leading-[1.26em] font-normal text-pretty text-ink sm:mt-[14px] sm:mb-0 sm:w-[578px] sm:max-w-[920px] sm:text-[clamp(17.3px,2.19vw,25px)] sm:leading-[1.2em]"
+            className="-mt-1 mb-[10px] w-full max-w-full text-[22.5px] leading-[1.26em] font-normal text-pretty text-ink sm:mt-[4px] sm:mb-0 sm:w-auto sm:max-w-[920px] sm:text-[clamp(19.9px,2.52vw,28.8px)] sm:leading-[1.15em]"
           >
             עם כלים ואסטרטגיה לחיים בעולם שלא מפסיק להתהפך.
           </p>
           <div data-reveal className="mt-0 flex flex-col items-center gap-[14px] pt-0 sm:mt-[1em] sm:items-start sm:pt-[0.5em]">
             <div className="mt-[18px] flex w-full flex-wrap items-center justify-center gap-4 sm:mt-7 sm:w-auto sm:justify-start">
-              <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[46px] sm:py-[17px] sm:text-[26px]">
+              <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[53px] sm:py-[20px] sm:text-[30px]">
                 אני רוצה לצאת לדרך!
               </Cta>
             </div>
@@ -88,7 +88,7 @@ export function Hero() {
             <img
               src={asset('hero-eyal.webp')}
               alt="ד״ר אייל דורון"
-              className="relative mx-auto block h-auto w-full max-w-[420px] md:absolute md:top-1/2 md:left-0 md:mx-0 md:w-[123.9%] md:max-w-[983px] md:-translate-y-1/2"
+              className="relative mx-auto block h-auto w-full max-w-[420px] md:absolute md:top-1/2 md:left-0 md:mx-0 md:w-[123.9%] md:max-w-[983px] md:-translate-y-[40%]"
             />
           </picture>
         </div>

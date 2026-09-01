@@ -109,7 +109,7 @@ export function More() {
           <MoreCard {...CARDS[3]} idx={3} />
         </div>
       </div>
-      <div data-reveal data-reveal-early className="mt-11 text-center">
+      <div data-reveal data-reveal-early className="relative z-[1] mt-11 text-center">
         <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-4 sm:text-[21.3px]">
           הנה - הצטרפתי
         </Cta>

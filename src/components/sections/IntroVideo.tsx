@@ -29,11 +29,14 @@ export function IntroVideo() {
       id="intro-video"
       className="relative px-4 pt-5 pb-[6px] sm:px-[clamp(18px,6vw,8em)] sm:pt-10 sm:pb-[110px]"
     >
-      {/* Animated gradient washing in from both sides, fading toward the video. */}
+      {/* Animated gradient washing in from both sides, fading toward the video
+          and toward the top/bottom edges so it blends into the sections around it. */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-0 animate-[b2cGradShift_9s_ease-in-out_infinite_alternate] bg-[linear-gradient(90deg,#725AF6_0%,#E15839_50%,#F6C760_100%)] bg-[length:300%_100%] opacity-35 [mask-image:linear-gradient(90deg,#000_0%,transparent_32%,transparent_68%,#000_100%)]"
       />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 z-0 h-[140px] bg-[linear-gradient(180deg,#f6f5f3_0%,rgba(246,245,243,0)_100%)]" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[140px] bg-[linear-gradient(0deg,#f6f5f3_0%,rgba(246,245,243,0)_100%)]" />
       <div data-reveal className="relative z-[1] mx-auto w-[min(100%,460px)] overflow-hidden rounded-[32px] bg-dark">
         {playing ? (
           <iframe
