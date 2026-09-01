@@ -20,9 +20,9 @@ export function About() {
           className="relative z-[1] flex min-h-0 w-full items-end justify-end self-stretch sm:min-h-[clamp(520px,58vw,820px)]"
         >
           <img
-            src={asset('eyal-bg3.webp')}
+            src={asset('eyal-about-new.webp')}
             alt="ד״ר אייל דורון"
-            className="static mx-auto block h-auto w-full max-w-[440px] sm:absolute sm:right-10 sm:bottom-0 sm:mx-0 sm:w-[118%] sm:max-w-[780px]"
+            className="static mx-auto block h-auto w-full max-w-[440px] sm:absolute sm:right-10 sm:bottom-0 sm:mx-0 sm:h-full sm:w-auto sm:max-w-none sm:object-contain sm:object-bottom"
           />
         </div>
         <div data-reveal className="relative z-[30] mr-0 text-center sm:mr-[clamp(20px,4.5vw,90px)] sm:ml-[clamp(40px,4.5vw,90px)] sm:text-right">
