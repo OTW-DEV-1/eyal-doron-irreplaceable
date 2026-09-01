@@ -59,9 +59,11 @@ export function Logos() {
         </div>
         <p
           data-reveal
-          className="mx-auto mt-11 px-5 text-center text-[28.8px] leading-[1.27em] font-bold whitespace-normal text-ink sm:text-[clamp(18px,2.75vw,45px)] sm:leading-normal sm:whitespace-nowrap"
+          className="mx-auto mt-11 px-5 text-center text-[6.6vw] leading-[1.27em] font-bold whitespace-normal text-ink sm:text-[clamp(18px,2.75vw,45px)] sm:leading-normal sm:whitespace-nowrap"
         >
-          וכעת, לראשונה, הוא הופך את הידע, הניסיון והכלים שצבר לתהליך הפתוח לכולם.
+          וכעת, לראשונה, הוא הופך את הידע, <br className="sm:hidden" />
+          הניסיון והכלים שצבר <br className="sm:hidden" />
+          לתהליך הפתוח לכולם.
         </p>
       </div>
     </section>

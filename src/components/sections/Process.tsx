@@ -8,8 +8,8 @@ export function Process() {
       <div className="relative overflow-hidden rounded-[44px] border border-white/10 bg-dark px-4 pt-[46px] pb-14 text-on-dark sm:px-[clamp(20px,4vw,60px)] sm:py-[clamp(50px,6vw,80px)]">
         <Aurora colors="#725AF6,#E15839,#F6C760" intensity={0.55} style={{ inset: 0 }} />
         <div className="relative z-[2]">
-          <h2 data-reveal className="mb-[2px] pt-[.12em] pb-[.15em] text-center text-[44px] leading-[0.8em] font-bold text-white sm:text-[clamp(34px,5.6vw,68px)]">
-            הבלתי-ניתנים להחלפה
+          <h2 data-reveal className="mb-[2px] pt-[.12em] pb-[.15em] text-center text-[44px] leading-[0.95em] font-bold text-white sm:text-[clamp(34px,5.6vw,68px)] sm:leading-[0.8em]">
+            הבלתי-ניתנים <span className="text-b2c">להחלפה</span>
           </h2>
           <div className="h-9" />
           <div data-reveal className="mx-auto max-w-[1240px] text-center">
