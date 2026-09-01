@@ -49,11 +49,14 @@ function Row({ images, direction }: { images: string[]; direction: 1 | -1 }) {
       const mid = vr.left + vr.width / 2
       const mobile = vr.width < 641
       const maxDeg = mobile ? 5 : 12
-      const depth = mobile ? 26 : 70
       for (const p of panels) {
         const r = p.getBoundingClientRect()
         const n = Math.max(-1, Math.min(1, (r.left + r.width / 2 - mid) / (vr.width / 2)))
-        p.style.transform = `rotateY(${(n * maxDeg).toFixed(2)}deg) translateZ(${(-Math.abs(n) * depth).toFixed(1)}px)`
+        // Pivot on the inner edge (the one facing the centre) so the outer
+        // edge swings toward the viewer — the trapezoid opens outward as in
+        // the reference — while the projected gaps stay even.
+        p.style.transformOrigin = n < 0 ? 'right center' : 'left center'
+        p.style.transform = `rotateY(${(-n * maxDeg).toFixed(2)}deg)`
       }
     }
 
@@ -68,7 +71,7 @@ function Row({ images, direction }: { images: string[]; direction: 1 | -1 }) {
           <div
             key={i}
             aria-hidden={i >= images.length || undefined}
-            className="aspect-video w-[62vw] flex-none bg-page will-change-transform sm:w-[32.5vw]"
+            className="aspect-video w-[62vw] flex-none overflow-hidden rounded-[10px] bg-page will-change-transform sm:w-[32.5vw]"
           >
             <img
               src={asset(`gallery/${img}.webp`)}
