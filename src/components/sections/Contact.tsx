@@ -54,7 +54,7 @@ export function Contact() {
               aria-hidden="true"
               className="hidden"
             />
-            <textarea name="message" required placeholder="הודעה *" rows={3} className={`${FIELD} resize-y sm:col-span-full`} />
+            <textarea name="message" placeholder="הודעה:" rows={3} className={`${FIELD} resize-y sm:col-span-full`} />
             <label className="flex cursor-pointer items-start gap-[10px] text-[18px] leading-[1.35] text-on-dark-muted sm:col-span-full">
               <input
                 type="checkbox"

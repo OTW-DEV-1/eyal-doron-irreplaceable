@@ -47,9 +47,7 @@ export function Hero() {
             data-reveal
             className="mb-0 text-[22.5px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mb-2 sm:text-[clamp(18px,2.39vw,31.6px)] sm:leading-[1.2em]"
           >
-            תוכנית חדשה לעולם מסוג חדש.
-            <br />
-            כלים ואסטרטגיה לחיים ולעבודה בעולם מתהפך
+            תוכנית פעולה חדשה לעולם מסוג חדש
           </p>
           <div data-reveal>
             <h1 className="text-headline pt-0 pb-[.06em] text-[min(63.75px,16.15vw)] leading-[0.9] font-bold sm:h-[127px] sm:pt-[.04em] sm:text-[clamp(45px,7.96vw,104px)] sm:leading-[0.8em]">
@@ -62,25 +60,18 @@ export function Hero() {
             data-reveal
             className="mt-5 w-full max-w-full pb-[10px] text-[22.5px] leading-[1.1em] font-semibold text-pretty text-ink sm:mt-20 sm:w-auto sm:max-w-[945px] sm:pb-0 sm:text-[clamp(19.6px,2.58vw,29.3px)] sm:leading-[1.05em]"
           >
-            קורס דיגיטלי שיגרום לכם לחשוב אחרת
-            <br />
-            וייתן לכם כלים לגיבוש אסטרטגיה ותוכנית פעולה
+            הקורס הדיגיטלי-פיזי החדש של ד״ר אייל דורון
           </p>
           <p
             data-reveal
             className="-mt-1 mb-[10px] w-full max-w-full text-[22.5px] leading-[1.26em] font-normal text-pretty text-ink sm:mt-[14px] sm:mb-0 sm:w-[578px] sm:max-w-[920px] sm:text-[clamp(17.3px,2.19vw,25px)] sm:leading-[1.2em]"
           >
-            התהליך הדיגיטלי והפיזי החדש של ד״ר אייל דורון מחבר <br className="hidden sm:inline" />
-            בין רעיונות גדולים לבין החיים עצמם. <br />
-            אתם מצטרפים לתהליך המשלב ידע ממגוון עולמות תוכן,
-            <br />
-            חשיבה ומחקר עם כלים מעשיים ותהליך מובנה, <br />
-            שבסופו תגבשו אסטרטגיה אישית ותבנו תוכנית פעולה משלכם לעתיד.
+            עם כלים ואסטרטגיה לחיים בעולם שלא מפסיק להתהפך.
           </p>
           <div data-reveal className="mt-0 flex flex-col items-center gap-[14px] pt-0 sm:mt-[1em] sm:items-start sm:pt-[0.5em]">
             <div className="mt-[18px] flex w-full flex-wrap items-center justify-center gap-4 sm:mt-7 sm:w-auto sm:justify-start">
               <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[46px] sm:py-[17px] sm:text-[26px]">
-                הצטרפתי - אני בפנים!
+                אני רוצה לצאת לדרך!
               </Cta>
             </div>
           </div>

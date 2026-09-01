@@ -13,19 +13,16 @@ export function Closing() {
             data-reveal
             className="text-headline w-full self-center pt-[.12em] pb-[.12em] text-center text-[42px] leading-[0.9em] font-bold whitespace-normal sm:w-[96vw] sm:text-[clamp(24px,4.4vw,68px)] sm:whitespace-nowrap"
           >
-            תפסיקו לנסות להתכונן לעתיד, תיצרו אותו. <br />
-            <span className="text-b2c">תייצרו עתיד מקורי ומלא בהפתעה עצמית.</span>
+            תפסיקו לנסות להתכונן לעתיד, <br />
+            תתחילו ליצור אותו. <span className="text-b2c">עתיד מקורי ומפתיע</span>
           </h2>
-          <p data-reveal className="text-[22.5px] leading-[1.2em] font-semibold text-ink sm:text-[clamp(20px,2.55vw,29px)]">
-            ובמאמר אישי ממני
-          </p>
           <div
             data-reveal
             className="max-w-[760px] rounded-[22px] border border-white bg-[linear-gradient(160deg,rgba(255,255,255,.85)_0%,rgba(239,238,235,.85)_100%)] p-[28px_32px] backdrop-blur-[8px]"
           >
             <p className="text-[22.5px] leading-[1.2em] text-pretty text-ink sm:text-[clamp(20px,2.55vw,29px)]">
               ״מניסיון של אלפי סדנאות ותהליכים, אנשים הם הרבה יותר מוכשרים ויצירתיים ממה שנדמה להם. הבעיה שהם מביאים
-              זאת לידי ביטוי לרוב רק במצבי קיצון. הרעיון הוא לחיות ׳על מלא׳ ביום-יום שלנו, כל פעם מחדש.״
+              זאת לידי ביטוי לרוב רק במצבי קיצון. הרעיון הוא לחיות ״על מלא״ ביום-יום שלנו, כל פעם מחדש.״
             </p>
             <p className="mt-[14px] text-[26px] font-bold text-ink-gray">אייל</p>
           </div>

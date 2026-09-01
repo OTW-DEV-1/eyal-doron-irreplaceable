@@ -41,9 +41,8 @@ export function Logos() {
           data-reveal
           className="mx-auto mb-11 px-5 pb-[10px] text-center text-[25px] leading-[1.27em] font-bold whitespace-normal text-ink sm:pb-7 sm:text-[clamp(18px,2.75vw,45px)] sm:leading-normal sm:whitespace-nowrap"
         >
-          במשך שנים מלווה ד״ר אייל דורון יזמים, מנהלים, עובדים
-          <br className="hidden sm:inline" />
-          וארגונים מובילים בפיתוח חשיבה יצירתית ובהתמודדות עם עולם של חוסר ודאות.
+          במשך שנים מלווה ד״ר אייל דורון יזמים, ארגונים, הנהלות בכירות, מובילי חינוך ומשרדי ממשלה <br className="hidden sm:inline" />
+          באסטרטגיה יצירתית, בפיתוח טלנטים ודור עתיד וחתירה להישגי שיא בעולם של חוסר ודאות.
         </p>
         <div data-reveal>
           <LogoLoop gap={40} duration={26}>
@@ -58,6 +57,12 @@ export function Logos() {
             ))}
           </LogoLoop>
         </div>
+        <p
+          data-reveal
+          className="mx-auto mt-11 px-5 text-center text-[25px] leading-[1.27em] font-bold whitespace-normal text-ink sm:text-[clamp(18px,2.75vw,45px)] sm:leading-normal sm:whitespace-nowrap"
+        >
+          וכעת, לראשונה, הוא הופך את הידע, הניסיון והכלים שצבר לתהליך הפתוח לכולם.
+        </p>
       </div>
     </section>
   )

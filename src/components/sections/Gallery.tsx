@@ -23,10 +23,12 @@ const SEQUENCE = [
  */
 export function Gallery() {
   const stripRef = useRef<HTMLDivElement>(null)
+  const trackRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const c = stripRef.current
-    if (!c) return
+    const track = trackRef.current
+    if (!c || !track) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
     let raf = 0
@@ -39,18 +41,15 @@ export function Gallery() {
       const half = c.scrollWidth / 2
       // A user drag moves scrollLeft under us; resync instead of fighting it.
       if (pos == null || Math.abs(c.scrollLeft - pos) > 2) pos = c.scrollLeft
-      if (!paused) {
-        pos += window.innerWidth < 640 ? 0.18 : 0.35
-        c.scrollLeft = pos
-      }
-      if (c.scrollLeft >= half) {
-        c.scrollLeft -= half
-        pos = c.scrollLeft
-      }
-      if (c.scrollLeft < 1) {
-        c.scrollLeft += half - c.clientWidth
-        pos = c.scrollLeft
-      }
+      if (!paused) pos += window.innerWidth < 640 ? 0.18 : 0.35
+      if (pos >= half) pos -= half
+      if (pos < 1) pos += half - c.clientWidth
+      // scrollLeft is quantized to whole pixels, which makes a slow drift
+      // visibly step. Scroll the integer part and put the sub-pixel remainder
+      // on the track as a transform so the motion stays perfectly smooth.
+      const whole = Math.floor(pos)
+      c.scrollLeft = whole
+      track.style.transform = `translateX(${(whole - pos).toFixed(3)}px)`
       const cr = c.getBoundingClientRect()
       const mid = cr.left + cr.width / 2
       const mob = cr.width < 640
@@ -94,8 +93,9 @@ export function Gallery() {
         <div
           ref={stripRef}
           dir="ltr"
-          className="no-scrollbar flex cursor-grab gap-3 overflow-x-auto p-[24px_20vw_70px] [scrollbar-width:none] sm:gap-7 sm:p-[36px_40px_210px]"
+          className="no-scrollbar cursor-grab overflow-x-auto [scrollbar-width:none]"
         >
+          <div ref={trackRef} className="flex w-max gap-3 p-[24px_20vw_70px] will-change-transform sm:gap-7 sm:p-[36px_40px_210px]">
           {[...SEQUENCE, ...SEQUENCE].map((img, i) => (
             <div
               key={i}
@@ -110,6 +110,7 @@ export function Gallery() {
               />
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>

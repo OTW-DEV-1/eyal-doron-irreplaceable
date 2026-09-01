@@ -9,27 +9,29 @@ export function Process() {
         <Aurora colors="#725AF6,#E15839,#F6C760" intensity={0.55} style={{ inset: 0 }} />
         <div className="relative z-[2]">
           <h2 data-reveal className="mb-[2px] pt-[.12em] pb-[.15em] text-center text-[44px] leading-[0.8em] font-bold text-white sm:text-[clamp(34px,5.6vw,68px)]">
-            אני רוצה להציע לכם
+            הבלתי-ניתנים להחלפה
           </h2>
           <div className="h-9" />
           <div data-reveal className="mx-auto max-w-[1000px] text-center">
             <p className="text-[22.5px] leading-[1.3em] text-pretty text-on-dark sm:text-[clamp(20px,2.55vw,29px)]">
-              תהליך דיגיטלי ופיזי חדש שפיתחתי, עם המון ידע מפיל אסימונים, תובנות ומקורות מגוונים ללמידה, ובעיקר עם דגש
-              גדול על כלים מעשיים ותהליך מובנה ליישום.
+              תהליך דיגיטלי-פיזי חדש המשלב ידע תיאורטי וניסיון של שנים בעבודה בשטח.
               <br />
-              &nbsp;זהו מסלול ייחודי המשלב שיעורים מצולמים, ליווי אישי, הן פרסונלי (בני אדם.. כן כן)
+              מסלול ייחודי של ידע והשראה ממגוון עולמות, מודלים ומחקר, תובנות מפילות אסימונים וכלים מעשיים ליישום.
+            </p>
+            <p className="mt-6 text-[22.5px] leading-[1.3em] text-pretty text-on-dark sm:text-[clamp(20px,2.55vw,29px)]">
+              שיעורים מצולמים, חומרים מקוריים לתרגול, קהילת עבודה משותפת, ליווי אישי של מנחה, צ׳ט-בוט מיוחד להתייעצות
+              וסדנת סיום פיסית.
               <br />
-              והן של צ׳ט בוט מיוחד להתייעצות, וסדנה מעשית מסכמת פרונטלית איתי.
+              הרעיון הוא לא רק לחשוב אחרת, אלא לקחת את החשיבה הזאת לחיים ולעבודה ולתרגם אותה לאסטרטגיה ולתוכנית פעולה
+              מעשית משלכם.
             </p>
           </div>
           <p data-reveal className="mx-auto mt-11 text-center text-[27.5px] font-bold text-white sm:text-[clamp(22px,2.6vw,30px)]">
-            הצטרפו לקהילה של אנשים שחושבים אחרת, ביחד.
-            <br />
-            <span className="text-[.85em] font-normal text-on-dark-muted">ד״ר אייל דורון</span>
+            בואו לחשוב אחרת, ביחד.
           </p>
           <div data-reveal data-reveal-early className="mt-[30px] text-center">
             <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[38px] sm:py-4 sm:text-[21.3px]">
-              גם אני רוצה תוכנית אסטרטגית לעולם מתהפך!
+              אני בפנים!
             </Cta>
           </div>
         </div>

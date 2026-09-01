@@ -45,7 +45,7 @@ const CARDS: { icon: keyof typeof ICONS; title: string; text: string; from: 'rig
   {
     icon: 'doc',
     title: 'מקורות מעוררי מחשבה',
-    text: 'הפניות לספרים ולמאמרים שפשוט חייבים להכיר.',
+    text: 'והפניות לספרים ולמאמרים שפשוט חייבים להכיר.',
     from: 'left',
   },
   {
@@ -56,8 +56,8 @@ const CARDS: { icon: keyof typeof ICONS; title: string; text: string; from: 'rig
   },
   {
     icon: 'people',
-    title: 'קהילת Creativity in Action',
-    text: 'הזדמנות להצטרף לקהילה שלא תאפשר לשגרה להשכיח את מה שחשוב באמת - להמשיך לקבל עדכונים ותובנות ולהרחיב את מעגל החיבורים והאפשרויות.',
+    title: 'הזדמנות להצטרף לקהילת Creativity in Action',
+    text: 'שלא תאפשר לשגרה להשכיח את מה שחשוב באמת - להמשיך לקבל עדכונים ותובנות ולהרחיב את מעגל החיבורים והאפשרויות.',
     from: 'left',
   },
 ]
@@ -101,7 +101,7 @@ export function More() {
           <MoreCard {...CARDS[0]} idx={0} />
           <div data-reveal data-reveal-mode="scale" className="relative z-[1] hidden min-h-[480px] items-center justify-center sm:row-span-2 sm:flex">
             <div className="flex h-[280px] w-[280px] items-center justify-center rounded-[44px] bg-[linear-gradient(135deg,#725AF6,#E15839_55%,#F6C760)] shadow-[0_14px_36px_rgba(114,90,246,.28)]">
-              <img src={asset('logo-white.png')} alt="ד״ר אייל דורון" className="block h-auto w-[78%]" />
+              <img src={asset('New-Logo-White.png')} alt="ד״ר אייל דורון" className="block h-auto w-[78%]" />
             </div>
           </div>
           <MoreCard {...CARDS[1]} idx={1} />

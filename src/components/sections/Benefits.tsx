@@ -1,21 +1,27 @@
+import type { ReactNode } from 'react'
 import { CHECKOUT_URL, CARD, Cta } from '@/components/ui'
 
-const BENEFITS = [
-  { num: '01', title: 'כלים משני חשיבה', text: 'ליישום ולפתרון בעיות ביום-יום, בחיים ובעבודה.' },
-  { num: '02', title: 'פיתוח מיומנויות של ניהול', text: 'שינוי דפוסי חשיבה וחידוד יכולות יצירתיות.' },
-  { num: '03', title: 'אסטרטגיה אישית', text: 'לשנים הקרובות.' },
+const BENEFITS: { num: string; text: ReactNode }[] = [
+  { num: '01', text: (<><strong>אסטרטגיה אישית</strong> לשנים הקרובות</>) },
+  { num: '02', text: (<><strong>תוכנית פעולה אישית ויצירתית</strong> שאיתה תרוצו אחרי שהתהליך הדיגיטלי יסתיים</>) },
+  { num: '03', text: (<><strong>כלים לניהול אישי ולפתרון בעיות</strong>, בחיים ובעבודה</>) },
+  { num: '04', text: (<><strong>פיתוח וחידוד מיומנויות</strong> חשיבה יצירתית והתמודדות עם שינוי</>) },
   {
-    num: '04',
-    title: 'מתווה מובנה של תכנית עבודה מעשית',
-    text: 'שישמש אתכם הרבה אחרי שהתהליך הדיגיטלי יסתיים.',
+    num: '05',
+    text: (<><strong>להגדיר במה אני הכי מעולה בעולם</strong> - והיכולת לפעול ממנו באופן אינטואיטיבי, משמח ומצליח יותר</>),
   },
-  { num: '05', title: 'הזדמנויות', text: 'השראה מיוצרים והוגי דעות וחיבורים לאנשים מעניינים.' },
   {
     num: '06',
-    title: 'חשיפה לעולמות מרתקים',
-    text: 'של פילוסופיה, חשיבה יצירתית, תורות ניהול בעולם החדש, מתודות של ארגונים פורצי דרך ומחקר של משפיעים עולמיים.',
+    text: (
+      <>
+        <strong>השראה</strong> מעולמות מרתקים של פילוסופיה, דרמה וחינוך, <strong>חשיפה</strong> לתורות ניהול בעולם
+        החדש, <strong>היכרות</strong> עם מתודות של ארגונים פורצי דרך <strong>ותובנות</strong> ממחקריו של ד״ר דורון על
+        אישים משפיעים ומובילי דעת קהל בעולם
+      </>
+    ),
   },
-  { num: '07', title: 'להיות במקום שבו אנו הכי מעולים', text: 'באופן הכי אינטואיטיבי, משמח ומצליח.' },
+  { num: '07', text: (<><strong>הכרות עם הספרים שבאמת שינו את העולם</strong> ומאז הכל זה הערות שוליים...</>) },
+  { num: '08', text: (<><strong>חיבורים</strong> לאנשים מרתקים, <strong>הזדמנויות</strong> חדשות ורשת תומכת של אנשים</>) },
 ]
 
 /**
@@ -26,10 +32,10 @@ export function Benefits() {
   return (
     <section id="benefits" className="relative px-4 pt-[30px] pb-[50px] sm:px-[clamp(28px,8vw,10em)] sm:pt-[60px] sm:pb-[70px]">
       <h2 data-reveal className="text-headline mb-3 pt-[.12em] pb-[.18em] text-center text-[44px] leading-[0.8em] font-bold sm:text-[clamp(34px,5.6vw,68px)]">
-        מה מרוויחים?
+        Quick Wins
       </h2>
       <p data-reveal className="mb-13 pt-[6px] text-center text-[25.9px] leading-[1.2em] font-semibold text-ink-black sm:text-[clamp(26.4px,3.04vw,35.2px)]">
-        באנו להכין יחד תוכנית חדשה <br className="sm:hidden" />
+        באנו להבין יחד תוכנית חדשה <br className="sm:hidden" />
         לעולם מסוג חדש.
       </p>
 
@@ -48,8 +54,7 @@ export function Benefits() {
               {b.num}
             </div>
             <div className="relative z-[1] pt-0 text-center sm:pt-0">
-              <h4 className="mb-3 text-[24px] leading-[1.2] font-bold text-ink-black sm:text-[clamp(24px,2.9vw,33px)]">{b.title}</h4>
-              <p className="mx-auto max-w-full text-[22.5px] leading-[1.25em] text-pretty text-ink-black sm:max-w-[820px] sm:text-[clamp(20px,2.55vw,29px)]">
+              <p className="mx-auto max-w-full text-[22.5px] leading-[1.25em] text-pretty text-ink-black sm:max-w-[820px] sm:text-[clamp(20px,2.55vw,29px)] [&_strong]:font-bold">
                 {b.text}
               </p>
             </div>
@@ -59,9 +64,6 @@ export function Benefits() {
         ))}
       </div>
 
-      <p data-reveal className="mx-auto mt-11 max-w-[1000px] text-center text-[22.5px] leading-[1.25em] font-semibold text-pretty text-ink sm:text-[clamp(20px,2.55vw,29px)]">
-        סדנה שבה הכל מתחבר, כולנו נפגשים, מדייקים ומתניעים את תוכנית הפעולה האישית שלנו.
-      </p>
       <div data-reveal data-reveal-early className="mt-12 text-center">
         <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-10 sm:py-4 sm:text-[21.3px]">
           הנה הצטרפתי!

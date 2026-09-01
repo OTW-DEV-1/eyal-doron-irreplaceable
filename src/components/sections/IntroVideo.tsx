@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { CHECKOUT_URL, Cta } from '@/components/ui'
 
 const VIMEO_ID = '1219221055'
 const VIMEO_HASH = '2dba3f212d'
@@ -28,26 +27,14 @@ export function IntroVideo() {
   return (
     <section
       id="intro-video"
-      className="grid grid-cols-1 items-center gap-[clamp(16px,2vw,30px)] px-4 pt-5 pb-[6px] sm:grid-cols-1 sm:px-[clamp(18px,6vw,8em)] sm:pt-10 sm:pb-[110px] md:grid-cols-2"
+      className="relative px-4 pt-5 pb-[6px] sm:px-[clamp(18px,6vw,8em)] sm:pt-10 sm:pb-[110px]"
     >
-      <div data-reveal className="text-center">
-        <p className="pb-[18px] text-[34.5px] leading-[1.15em] font-bold text-pretty text-ink sm:pb-0 sm:text-[clamp(37px,4.1vw,60px)] sm:leading-[1.09em]">
-          וכעת, לראשונה,
-          <br className="hidden sm:inline" />
-          הוא גיבש את הכל <br className="sm:hidden" />
-          לכדי&nbsp;
-          <br className="hidden sm:inline" />
-          תהליך דיגיטלי פיזי <br />
-          <span className="text-b2c">מיוחד לאנשים פרטיים.</span>
-        </p>
-        <div className="mt-8 hidden pt-5 sm:block">
-          <Cta href={CHECKOUT_URL} className="px-10 py-4 text-[21.5px]">
-            אני רוצה לצאת לדרך!
-          </Cta>
-        </div>
-      </div>
-
-      <div data-reveal className="relative mx-auto w-[min(100%,460px)] justify-self-center overflow-hidden rounded-[32px] bg-dark">
+      {/* Animated gradient washing in from both sides, fading toward the video. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-0 animate-[b2cGradShift_9s_ease-in-out_infinite_alternate] bg-[linear-gradient(90deg,#725AF6_0%,#E15839_50%,#F6C760_100%)] bg-[length:300%_100%] opacity-35 [mask-image:linear-gradient(90deg,#000_0%,transparent_32%,transparent_68%,#000_100%)]"
+      />
+      <div data-reveal className="relative z-[1] mx-auto w-[min(100%,460px)] overflow-hidden rounded-[32px] bg-dark">
         {playing ? (
           <iframe
             src={`${PLAYER_URL}&autoplay=1`}
