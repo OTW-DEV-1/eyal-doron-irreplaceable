@@ -48,15 +48,16 @@ function Row({ images, direction }: { images: string[]; direction: 1 | -1 }) {
       const vr = viewport.getBoundingClientRect()
       const mid = vr.left + vr.width / 2
       const mobile = vr.width < 641
-      const maxDeg = mobile ? 5 : 12
+      const maxDeg = mobile ? 4 : 10
       for (const p of panels) {
         const r = p.getBoundingClientRect()
         const n = Math.max(-1, Math.min(1, (r.left + r.width / 2 - mid) / (vr.width / 2)))
-        // Pivot on the inner edge (the one facing the centre) so the outer
-        // edge swings toward the viewer — the trapezoid opens outward as in
-        // the reference — while the projected gaps stay even.
-        p.style.transformOrigin = n < 0 ? 'right center' : 'left center'
-        p.style.transform = `rotateY(${(-n * maxDeg).toFixed(2)}deg)`
+        // Negative sign swings the OUTER edge toward the viewer, so the side
+        // trapezoids open outward as in the reference. A per-panel
+        // perspective keeps each projection local and symmetric — a shared
+        // scene perspective shifts off-centre panels sideways and makes them
+        // overlap their neighbours.
+        p.style.transform = `perspective(1200px) rotateY(${(-n * maxDeg).toFixed(2)}deg)`
       }
     }
 
@@ -65,19 +66,21 @@ function Row({ images, direction }: { images: string[]; direction: 1 | -1 }) {
   }, [direction])
 
   return (
-    <div ref={viewportRef} dir="ltr" className="overflow-hidden [perspective:1200px]">
-      <div ref={trackRef} className="flex w-max gap-[10px] [transform-style:preserve-3d] will-change-transform">
+    <div ref={viewportRef} dir="ltr" className="overflow-hidden">
+      <div ref={trackRef} className="flex w-max gap-[16px] will-change-transform">
         {[...images, ...images].map((img, i) => (
           <div
             key={i}
             aria-hidden={i >= images.length || undefined}
-            className="aspect-video w-[62vw] flex-none overflow-hidden rounded-[10px] bg-page will-change-transform sm:w-[32.5vw]"
+            className="flex aspect-video w-[62vw] flex-none items-center will-change-transform sm:w-[32.5vw]"
           >
+            {/* w-full + h-auto keeps the element box identical to the bitmap,
+                so the 10px radius rounds the visible image itself. */}
             <img
               src={asset(`gallery/${img}.webp`)}
               alt="מתוך חוויית הקורס"
               draggable={false}
-              className="pointer-events-none block h-full w-full object-contain"
+              className="pointer-events-none block h-auto max-h-full w-full rounded-[10px]"
             />
           </div>
         ))}
