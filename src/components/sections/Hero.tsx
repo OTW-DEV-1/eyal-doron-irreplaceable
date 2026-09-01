@@ -74,24 +74,24 @@ export function Hero() {
                 אני רוצה לצאת לדרך!
               </Cta>
             </div>
-            {/* Desktop "start here" badge: in normal flow so it always sits
-                below the CTA at every size, even past the first viewport.
-                The ring spins gently, the arrow floats inside. */}
-            <a
-              href="#logos"
-              className="relative mt-8 hidden aspect-square w-[clamp(112px,9.5vw,150px)] self-start md:block"
-            >
-              <img
-                src={asset('circle-badge.png')}
-                alt=""
-                className="absolute inset-0 h-full w-full animate-[spinSlow_18s_linear_infinite] object-contain"
-              />
-              <img
-                src={asset('scroll-arrow.png')}
-                alt="לסקשן הבא"
-                className="absolute top-1/2 left-1/2 h-[38%] w-[32%] animate-[bobArrow_2.2s_ease-in-out_infinite] object-contain"
-              />
-            </a>
+            {/* Desktop "start here" badge: rendered from a zero-height wrapper
+                so it always sits below the CTA, right-aligned with it, at
+                every size - without adding column height that would shift the
+                portrait. The ring spins gently, the arrow floats inside. */}
+            <div className="hidden h-0 self-stretch md:block">
+              <a href="#logos" className="relative mt-8 block aspect-square w-[clamp(112px,9.5vw,150px)]">
+                <img
+                  src={asset('circle-badge.png')}
+                  alt=""
+                  className="absolute inset-0 h-full w-full animate-[spinSlow_18s_linear_infinite] object-contain"
+                />
+                <img
+                  src={asset('scroll-arrow.png')}
+                  alt="לסקשן הבא"
+                  className="absolute top-1/2 left-1/2 h-[38%] w-[32%] animate-[bobArrow_2.2s_ease-in-out_infinite] object-contain"
+                />
+              </a>
+            </div>
           </div>
         </div>
 
