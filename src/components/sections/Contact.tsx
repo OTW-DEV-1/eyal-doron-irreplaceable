@@ -34,7 +34,7 @@ export function Contact() {
       <div className="relative overflow-hidden rounded-[40px] border border-white/10 bg-dark px-4 py-14 text-on-dark sm:px-8 sm:py-[81px]">
         <Aurora colors="#725AF6,#E15839,#F6C760" intensity={0.6} style={{ inset: 0 }} />
         <div className="relative z-[2] mx-auto max-w-[840px] text-center">
-          <h2 data-reveal className="mb-11 pt-[.12em] pb-[.18em] text-[clamp(34px,6vw,76px)] leading-[0.8em] font-bold text-white">
+          <h2 data-reveal className="mb-11 pt-[.12em] pb-[.18em] text-[10.2vw] leading-[0.8em] font-bold text-white sm:text-[clamp(34px,6vw,76px)]">
             יש לי עוד <span className="text-b2c">כמה תהיות...</span>
           </h2>
           <form

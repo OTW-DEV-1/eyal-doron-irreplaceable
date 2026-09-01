@@ -11,7 +11,7 @@ export function Closing() {
         <div className="relative z-[2] mx-auto flex max-w-[980px] flex-col items-center gap-[26px]">
           <h2
             data-reveal
-            className="text-headline w-full self-center pt-[.12em] pb-[.12em] text-center text-[42px] leading-[0.9em] font-bold whitespace-normal sm:w-[96vw] sm:text-[clamp(24px,4.4vw,68px)] sm:whitespace-nowrap"
+            className="text-headline w-full self-center pt-[.12em] pb-[.12em] text-center text-[7.6vw] leading-[0.9em] font-bold whitespace-normal sm:w-[96vw] sm:text-[clamp(24px,4.4vw,68px)] sm:whitespace-nowrap"
           >
             תפסיקו לנסות להתכונן לעתיד, <br />
             תתחילו ליצור אותו. <br />

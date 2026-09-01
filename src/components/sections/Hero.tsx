@@ -63,7 +63,7 @@ export function Hero() {
         <div className="flex flex-col items-center text-center sm:items-start sm:text-right md:-translate-y-[4%]">
           <p
             data-reveal
-            className="mb-0 text-[22.5px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mb-2 sm:text-[clamp(23.8px,3.16vw,41.8px)] sm:leading-[1.2em]"
+            className="mt-[10px] mb-0 text-[22.5px] leading-[1.26em] font-normal tracking-[.02em] text-ink-black sm:mt-0 sm:mb-2 sm:text-[clamp(23.8px,3.16vw,41.8px)] sm:leading-[1.2em]"
           >
             תוכנית פעולה חדשה לעולם מסוג חדש
           </p>
@@ -87,7 +87,7 @@ export function Hero() {
             עם כלים ואסטרטגיה לחיים בעולם שלא מפסיק להתהפך.
           </p>
           <div data-reveal className="mt-0 flex flex-col items-center gap-[14px] pt-0 sm:mt-[1em] sm:items-start sm:pt-[0.5em]">
-            <div className="mt-[18px] flex w-full flex-wrap items-center justify-center gap-4 sm:mt-7 sm:w-auto sm:justify-start">
+            <div className="mt-[18px] mb-[15px] flex w-full flex-wrap items-center justify-center gap-4 sm:mt-7 sm:mb-0 sm:w-auto sm:justify-start">
               <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[53px] sm:py-[20px] sm:text-[30px]">
                 אני רוצה לצאת לדרך!
               </Cta>

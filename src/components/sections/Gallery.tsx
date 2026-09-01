@@ -41,7 +41,7 @@ export function Gallery() {
       const half = c.scrollWidth / 2
       // A user drag moves scrollLeft under us; resync instead of fighting it.
       if (pos == null || Math.abs(c.scrollLeft - pos) > 2) pos = c.scrollLeft
-      if (!paused) pos += window.innerWidth < 640 ? 0.18 : 0.35
+      if (!paused) pos += window.innerWidth < 640 ? 0.26 : 0.35
       if (pos >= half) pos -= half
       if (pos < 1) pos += half - c.clientWidth
       // scrollLeft is quantized to whole pixels, which makes a slow drift

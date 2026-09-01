@@ -28,7 +28,7 @@ function LogoCard({ file, alt }: { file: string; alt: string }) {
 /** Trust strip: double marquee of client logos over a faded aurora. */
 export function Logos() {
   return (
-    <section id="logos" className="relative z-[1] py-[50px] sm:pt-[100px] sm:pb-8">
+    <section id="logos" className="relative z-[1] pt-[50px] pb-4 sm:pt-[100px] sm:pb-8">
       <Aurora
         colors="#725AF6,#E15839,#F6C760"
         intensity={0.6}
@@ -59,7 +59,7 @@ export function Logos() {
         </div>
         <p
           data-reveal
-          className="mx-auto mt-11 px-5 text-center text-[25px] leading-[1.27em] font-bold whitespace-normal text-ink sm:text-[clamp(18px,2.75vw,45px)] sm:leading-normal sm:whitespace-nowrap"
+          className="mx-auto mt-11 px-5 text-center text-[28.8px] leading-[1.27em] font-bold whitespace-normal text-ink sm:text-[clamp(18px,2.75vw,45px)] sm:leading-normal sm:whitespace-nowrap"
         >
           וכעת, לראשונה, הוא הופך את הידע, הניסיון והכלים שצבר לתהליך הפתוח לכולם.
         </p>
