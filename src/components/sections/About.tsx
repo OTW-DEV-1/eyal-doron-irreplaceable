@@ -22,7 +22,7 @@ export function About() {
           <img
             src={asset('eyal-about-new.webp')}
             alt="ד״ר אייל דורון"
-            className="static mx-auto block h-auto w-full max-w-[440px] sm:absolute sm:right-10 sm:bottom-0 sm:mx-0 sm:h-full sm:w-auto sm:max-w-none sm:-translate-x-[15%] sm:object-contain sm:object-bottom"
+            className="static mx-auto block h-auto w-full max-w-[440px] sm:absolute sm:right-10 sm:bottom-0 sm:mx-0 sm:h-full sm:w-auto sm:max-w-none sm:-translate-x-[20%] sm:object-contain sm:object-bottom"
           />
         </div>
         <div data-reveal className="relative z-[30] mr-0 text-center sm:mr-[clamp(20px,4.5vw,90px)] sm:ml-[clamp(40px,4.5vw,90px)] sm:text-right">
