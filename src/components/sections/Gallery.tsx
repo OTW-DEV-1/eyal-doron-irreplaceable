@@ -10,27 +10,25 @@ const BOTTOM = ['image6', 'image7', 'image8', 'image9', 'image10', 'image11', 'i
 /** Marquee speed in px per frame; matched across both rows. */
 const SPEED = 0.4
 
+/** Soft fade toward both side edges of each row. */
+const EDGE_FADE = 'linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent)'
+
 /**
- * One continuously drifting panoramic row. The set is rendered twice and the
+ * One continuously drifting flat row. The set is rendered twice and the
  * track's offset wraps inside [-half, 0), so the loop point is invisible in
- * both directions. Each panel's rotateY/translateZ is derived every frame from
- * its live distance to the viewport centre — straight in the middle, receding
- * toward the edges — which keeps the concave read correct while the row moves.
+ * both directions.
  *
  * All animation state lives in refs and inline styles; React never re-renders
  * during the loop.
  */
 function Row({ images, direction }: { images: string[]; direction: 1 | -1 }) {
-  const viewportRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const viewport = viewportRef.current
     const track = trackRef.current
-    if (!viewport || !track) return
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (!track) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const panels = Array.from(track.children) as HTMLElement[]
     let offset = 0
     let raf = 0
 
@@ -38,27 +36,10 @@ function Row({ images, direction }: { images: string[]; direction: 1 | -1 }) {
       raf = requestAnimationFrame(tick)
       const half = track.scrollWidth / 2
       if (!half) return
-      if (!reduced) {
-        offset += SPEED * direction
-        if (offset <= -half) offset += half
-        if (offset > 0) offset -= half
-      }
+      offset += SPEED * direction
+      if (offset <= -half) offset += half
+      if (offset > 0) offset -= half
       track.style.transform = `translate3d(${offset.toFixed(2)}px,0,0)`
-
-      const vr = viewport.getBoundingClientRect()
-      const mid = vr.left + vr.width / 2
-      const mobile = vr.width < 641
-      const maxDeg = mobile ? 4 : 10
-      for (const p of panels) {
-        const r = p.getBoundingClientRect()
-        const n = Math.max(-1, Math.min(1, (r.left + r.width / 2 - mid) / (vr.width / 2)))
-        // Negative sign swings the OUTER edge toward the viewer, so the side
-        // trapezoids open outward as in the reference. A per-panel
-        // perspective keeps each projection local and symmetric — a shared
-        // scene perspective shifts off-centre panels sideways and makes them
-        // overlap their neighbours.
-        p.style.transform = `perspective(1200px) rotateY(${(-n * maxDeg).toFixed(2)}deg)`
-      }
     }
 
     raf = requestAnimationFrame(tick)
@@ -66,13 +47,13 @@ function Row({ images, direction }: { images: string[]; direction: 1 | -1 }) {
   }, [direction])
 
   return (
-    <div ref={viewportRef} dir="ltr" className="overflow-hidden">
+    <div dir="ltr" className="overflow-hidden" style={{ maskImage: EDGE_FADE, WebkitMaskImage: EDGE_FADE }}>
       <div ref={trackRef} className="flex w-max gap-[16px] will-change-transform">
         {[...images, ...images].map((img, i) => (
           <div
             key={i}
             aria-hidden={i >= images.length || undefined}
-            className="flex aspect-video w-[62vw] flex-none items-center will-change-transform sm:w-[32.5vw]"
+            className="flex aspect-video w-[62vw] flex-none items-center sm:w-[32.5vw]"
           >
             {/* w-full + h-auto keeps the element box identical to the bitmap,
                 so the 10px radius rounds the visible image itself. */}
@@ -90,9 +71,9 @@ function Row({ images, direction }: { images: string[]; direction: 1 | -1 }) {
 }
 
 /**
- * Course-experience gallery: two full-bleed panoramic marquees stacked
- * vertically — the top row drifts right, the bottom row drifts left — with a
- * subtle concave 3D read, like a shallow curved cinema screen.
+ * Course-experience gallery: two full-bleed flat marquees stacked vertically —
+ * the top row drifts right, the bottom row drifts left — with a soft fade at
+ * both side edges.
  */
 export function Gallery() {
   return (
