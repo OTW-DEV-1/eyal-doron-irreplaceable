@@ -27,7 +27,7 @@ export function IntroVideo() {
   return (
     <section
       id="intro-video"
-      className="relative px-4 pt-5 pb-[6px] sm:px-[clamp(18px,6vw,8em)] sm:pt-10 sm:pb-[110px]"
+      className="relative px-4 pt-5 pb-[6px] sm:px-[clamp(18px,6vw,8em)] sm:pt-2 sm:pb-[110px]"
     >
       {/* Animated gradient washing in from both sides, fading toward the video
           and toward the top/bottom edges so it blends into the sections around it. */}

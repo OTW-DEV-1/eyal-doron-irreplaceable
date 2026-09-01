@@ -28,7 +28,7 @@ function LogoCard({ file, alt }: { file: string; alt: string }) {
 /** Trust strip: double marquee of client logos over a faded aurora. */
 export function Logos() {
   return (
-    <section id="logos" className="relative z-[1] py-[50px] sm:py-[100px]">
+    <section id="logos" className="relative z-[1] py-[50px] sm:pt-[100px] sm:pb-8">
       <Aurora
         colors="#725AF6,#E15839,#F6C760"
         intensity={0.6}

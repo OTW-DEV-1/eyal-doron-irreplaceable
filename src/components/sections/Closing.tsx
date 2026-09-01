@@ -19,7 +19,7 @@ export function Closing() {
           </h2>
           <div
             data-reveal
-            className="max-w-[760px] rounded-[22px] border border-white bg-[linear-gradient(160deg,rgba(255,255,255,.85)_0%,rgba(239,238,235,.85)_100%)] p-[28px_32px] backdrop-blur-[8px]"
+            className="my-[14px] max-w-[760px] rounded-[22px] border border-white bg-[linear-gradient(160deg,rgba(255,255,255,.85)_0%,rgba(239,238,235,.85)_100%)] p-[28px_32px] backdrop-blur-[8px]"
           >
             <p className="text-[22.5px] leading-[1.2em] text-pretty text-ink sm:text-[clamp(20px,2.55vw,29px)]">
               ״מניסיון של אלפי סדנאות ותהליכים, אנשים הם הרבה יותר מוכשרים ויצירתיים ממה שנדמה להם. הבעיה שהם מביאים

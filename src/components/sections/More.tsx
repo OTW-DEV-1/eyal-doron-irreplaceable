@@ -138,8 +138,8 @@ function MoreCard({
       className={`${CARD} relative z-[1] flex flex-col items-center justify-center gap-[10px] rounded-[30px] p-[38px_40px] text-center shadow-[0_12px_34px_rgba(20,19,24,.07)] transition-[transform,box-shadow] duration-[350ms] hover:-translate-y-[5px] hover:shadow-[0_22px_48px_rgba(20,19,24,.14)]`}
     >
       <GradientIcon id={`more-${idx}`} paths={ICONS[icon]} size={56} />
-      <h4 className="text-[24px] leading-[1.3] font-bold sm:text-[25.5px]">{title}</h4>
-      <p className="text-[21.5px] leading-[1.4] text-pretty text-gray-body">{text}</p>
+      <h4 className="text-[24px] leading-[1.15] font-bold sm:text-[25.5px]">{title}</h4>
+      <p className="text-[21.5px] leading-[1.25] text-pretty text-gray-body">{text}</p>
     </div>
   )
 }

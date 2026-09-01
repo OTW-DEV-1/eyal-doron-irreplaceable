@@ -19,7 +19,7 @@ export function Problem() {
           <Ghost className="right-[8%] bottom-[6%] -rotate-3 text-[clamp(33px,3.7vw,57px)] [-webkit-text-stroke:1.3px_rgba(255,255,255,.2)]">בינה מלאכותית</Ghost>
         </div>
         <div className="relative z-[2] mx-auto flex max-w-[1000px] flex-col items-center gap-[26px]">
-          <h2 data-reveal className="pt-[.12em] pb-[.18em] text-[44px] leading-[0.8em] font-bold text-white sm:text-[clamp(34px,5.6vw,68px)]">
+          <h2 data-reveal className="pt-[.12em] pb-[.18em] text-[44px] leading-[0.95em] font-bold text-white sm:text-[clamp(34px,5.6vw,68px)]">
             מרגישים שהכל משתנה? <br />
             לא יציב? לא ברור?
           </h2>
