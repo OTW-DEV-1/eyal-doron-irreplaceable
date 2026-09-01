@@ -79,7 +79,7 @@ export function Hero() {
                 The ring spins gently, the arrow floats inside. */}
             <a
               href="#logos"
-              className="relative mt-8 hidden aspect-square w-[clamp(112px,9.5vw,150px)] -translate-x-[40%] self-start md:block"
+              className="relative mt-8 hidden aspect-square w-[clamp(112px,9.5vw,150px)] self-start md:block"
             >
               <img
                 src={asset('circle-badge.png')}
