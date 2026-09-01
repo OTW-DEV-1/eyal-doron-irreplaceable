@@ -1,5 +1,6 @@
 -- Key/value store for B2C site settings editable at /admin/settings
--- (Zapier webhook URL, contact "to" email). Env vars remain the fallback.
+-- (Zapier webhook URL, contact "to" email, site-wide <head>/<body> scripts).
+-- Keys are upserted by the app, so new settings need no migration.
 -- Shares the Supertalent Supabase project — hence the b2c_ prefix.
 -- Run once in the Supabase dashboard: SQL Editor -> New query -> paste -> Run.
 

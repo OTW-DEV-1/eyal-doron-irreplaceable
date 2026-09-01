@@ -80,7 +80,7 @@ export default async function SettingsPage({
             />
           </label>
 
-          <label className="mb-8 block">
+          <label className="mb-6 block">
             <span className="mb-1 block font-semibold text-ink">אימייל לקבלת פניות</span>
             <span className="mb-2 block text-sm text-gray-body">
               לכתובת הזו נשלחת הודעה על כל פנייה. אפשר כמה כתובות מופרדות בפסיקים; ריק =
@@ -95,6 +95,50 @@ export default async function SettingsPage({
               className="w-full rounded-lg border border-ink/15 px-4 py-3 text-ink outline-none focus:border-brand-violet"
             />
           </label>
+
+          <label className="mb-6 block">
+            <span className="mb-1 block font-semibold text-ink">
+              סקריפטים ב-<code dir="ltr">&lt;head&gt;</code>
+            </span>
+            <span className="mb-2 block text-sm text-gray-body">
+              הדביקו כאן קוד מעקב שרץ בכל עמודי האתר — Google Tag Manager, Google Analytics,
+              פיקסל של פייסבוק, תגי אימות. הדביקו את הקוד המלא כולל תגית{' '}
+              <code dir="ltr">&lt;script&gt;</code>. ריק = לא מוזרק כלום.
+            </span>
+            <textarea
+              name="head_scripts"
+              defaultValue={settings.head_scripts}
+              rows={8}
+              placeholder="<!-- Google Tag Manager -->&#10;<script>...</script>"
+              dir="ltr"
+              spellCheck={false}
+              className="w-full rounded-lg border border-ink/15 px-4 py-3 font-mono text-sm text-ink outline-none focus:border-brand-violet"
+            />
+          </label>
+
+          <label className="mb-8 block">
+            <span className="mb-1 block font-semibold text-ink">
+              סקריפטים בתחילת ה-<code dir="ltr">&lt;body&gt;</code>
+            </span>
+            <span className="mb-2 block text-sm text-gray-body">
+              לקוד שצריך לשבת מיד אחרי פתיחת ה-<code dir="ltr">&lt;body&gt;</code> — למשל ה-
+              <code dir="ltr">&lt;noscript&gt;</code> של Google Tag Manager.
+            </span>
+            <textarea
+              name="body_scripts"
+              defaultValue={settings.body_scripts}
+              rows={5}
+              placeholder="<noscript><iframe src=&quot;https://www.googletagmanager.com/ns.html?id=GTM-XXXX&quot;></iframe></noscript>"
+              dir="ltr"
+              spellCheck={false}
+              className="w-full rounded-lg border border-ink/15 px-4 py-3 font-mono text-sm text-ink outline-none focus:border-brand-violet"
+            />
+          </label>
+
+          <p className="mb-6 rounded-lg bg-amber-50 p-3 text-sm text-amber-800">
+            שימו לב: הקוד נטען כפי שהוא בכל עמוד באתר. קוד שגוי עלול לשבור את התצוגה — הדביקו
+            רק קוד ממקור מהימן.
+          </p>
 
           <button
             type="submit"

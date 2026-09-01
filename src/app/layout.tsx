@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { getCachedSettings } from '@/lib/settings'
 import './globals.css'
 
 const title = 'הבלתי-ניתנים להחלפה | ד״ר אייל דורון'
@@ -20,10 +21,19 @@ export const viewport: Viewport = {
   themeColor: '#f6f5f3',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // Tracking snippets pasted at /admin/settings. They are rendered as raw markup
+  // in the server HTML — that is the only way a pasted <script> tag actually
+  // runs — so only the admin form may ever write them.
+  const { head_scripts: head, body_scripts: bodyStart } = await getCachedSettings()
+
   return (
     <html lang="he" dir="rtl">
-      <body className="overflow-x-clip">{children}</body>
+      {head ? <head dangerouslySetInnerHTML={{ __html: head }} /> : null}
+      <body className="overflow-x-clip">
+        {bodyStart ? <div dangerouslySetInnerHTML={{ __html: bodyStart }} /> : null}
+        {children}
+      </body>
     </html>
   )
 }
