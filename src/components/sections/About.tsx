@@ -29,7 +29,7 @@ export function About() {
           <h2 className="text-headline mb-[10px] pt-[.12em] pb-[.18em] text-[44px] leading-[0.8em] font-bold sm:text-[clamp(34px,5.6vw,68px)]">
             ד״ר אייל דורון
           </h2>
-          <p className="text-b2c mb-6 text-[30px] leading-[1.1em] font-semibold sm:text-[clamp(20px,2.2vw,27px)] sm:leading-normal">
+          <p className="text-b2c mb-6 text-[30px] leading-[1.1em] font-semibold sm:text-[clamp(25px,2.75vw,33.8px)] sm:leading-normal">
             הקול המוביל בישראל <br className="sm:hidden" />
             לפיתוח חשיבה יצירתית.
           </p>
