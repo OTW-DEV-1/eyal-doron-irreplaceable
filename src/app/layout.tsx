@@ -25,12 +25,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   // Tracking snippets pasted at /admin/settings. They are rendered as raw markup
   // in the server HTML — that is the only way a pasted <script> tag actually
   // runs — so only the admin form may ever write them.
-  const { head_scripts: head, body_scripts: bodyStart } = await getCachedSettings()
+  //
+  // Both go at the top of <body>, never into <head>: React hoists the app's
+  // stylesheet links into <head>, and giving <head> a dangerouslySetInnerHTML
+  // wipes them on hydration, leaving every page unstyled. Top-of-body is early
+  // enough for Google Tag Manager and the like.
+  const { head_scripts: topScripts, body_scripts: bodyStart } = await getCachedSettings()
 
   return (
     <html lang="he" dir="rtl">
-      {head ? <head dangerouslySetInnerHTML={{ __html: head }} /> : null}
       <body className="overflow-x-clip">
+        {topScripts ? <div dangerouslySetInnerHTML={{ __html: topScripts }} /> : null}
         {bodyStart ? <div dangerouslySetInnerHTML={{ __html: bodyStart }} /> : null}
         {children}
       </body>

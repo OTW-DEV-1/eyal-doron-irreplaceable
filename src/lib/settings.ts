@@ -14,9 +14,9 @@ export type SiteSettings = {
   zapier_webhook_url: string
   /** Where lead notification emails go; comma-separated list allowed. */
   contact_to_email: string
-  /** Raw markup injected into <head> on every page (GTM, verification tags…). */
+  /** Tracking markup injected at the top of <body> on every page (GTM, GA, pixels). */
   head_scripts: string
-  /** Raw markup injected right after <body> opens (e.g. the GTM noscript iframe). */
+  /** Markup injected right after it (e.g. the GTM noscript iframe). */
   body_scripts: string
 }
 

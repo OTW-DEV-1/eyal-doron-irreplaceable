@@ -97,13 +97,12 @@ export default async function SettingsPage({
           </label>
 
           <label className="mb-6 block">
-            <span className="mb-1 block font-semibold text-ink">
-              סקריפטים ב-<code dir="ltr">&lt;head&gt;</code>
-            </span>
+            <span className="mb-1 block font-semibold text-ink">קוד מעקב (סקריפטים)</span>
             <span className="mb-2 block text-sm text-gray-body">
               הדביקו כאן קוד מעקב שרץ בכל עמודי האתר — Google Tag Manager, Google Analytics,
-              פיקסל של פייסבוק, תגי אימות. הדביקו את הקוד המלא כולל תגית{' '}
-              <code dir="ltr">&lt;script&gt;</code>. ריק = לא מוזרק כלום.
+              פיקסל של פייסבוק. הדביקו את הקוד המלא כולל תגית{' '}
+              <code dir="ltr">&lt;script&gt;</code>; הוא נטען בתחילת ה-
+              <code dir="ltr">&lt;body&gt;</code>. ריק = לא מוזרק כלום.
             </span>
             <textarea
               name="head_scripts"
@@ -118,11 +117,12 @@ export default async function SettingsPage({
 
           <label className="mb-8 block">
             <span className="mb-1 block font-semibold text-ink">
-              סקריפטים בתחילת ה-<code dir="ltr">&lt;body&gt;</code>
+              קוד <code dir="ltr">&lt;noscript&gt;</code>
             </span>
             <span className="mb-2 block text-sm text-gray-body">
-              לקוד שצריך לשבת מיד אחרי פתיחת ה-<code dir="ltr">&lt;body&gt;</code> — למשל ה-
-              <code dir="ltr">&lt;noscript&gt;</code> של Google Tag Manager.
+              החלק השני של הקוד, זה שנפתח ב-<code dir="ltr">&lt;noscript&gt;</code> — למשל
+              ה-<code dir="ltr">&lt;iframe&gt;</code> של Google Tag Manager. נטען מיד אחרי הקוד
+              שלמעלה.
             </span>
             <textarea
               name="body_scripts"
