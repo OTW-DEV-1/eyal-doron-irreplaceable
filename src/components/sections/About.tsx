@@ -20,7 +20,7 @@ export function About() {
           className="relative z-[1] flex min-h-0 w-full items-end justify-end self-stretch sm:min-h-[clamp(520px,58vw,820px)]"
         >
           <img
-            src={asset('about-eyal.webp')}
+            src={asset('eyal-bg3.webp')}
             alt="ד״ר אייל דורון"
             className="static mx-auto block h-auto w-full max-w-[440px] sm:absolute sm:right-10 sm:bottom-0 sm:mx-0 sm:w-[118%] sm:max-w-[780px]"
           />

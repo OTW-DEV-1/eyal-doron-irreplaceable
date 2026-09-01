@@ -99,16 +99,11 @@ export function Hero() {
           data-reveal
           className="relative order-2 mt-0 flex min-h-0 items-end justify-start self-stretch md:order-none md:min-h-[460px]"
         >
-          {/* One element, two crops: the <source> swaps to the mobile artwork
-              below 901px so only one file is ever fetched. */}
-          <picture>
-            <source media="(max-width: 900px)" srcSet={asset('hero-eyal-mobile.png')} />
-            <img
-              src={asset('hero-eyal.webp')}
-              alt="ד״ר אייל דורון"
-              className="relative mx-auto block h-auto w-full max-w-[420px] md:absolute md:top-1/2 md:left-0 md:mx-0 md:w-[123.9%] md:max-w-[983px] md:-translate-y-[40%]"
-            />
-          </picture>
+          <img
+            src={asset('about-eyal.webp')}
+            alt="ד״ר אייל דורון"
+            className="relative mx-auto block h-auto w-full max-w-[420px] md:absolute md:top-1/2 md:left-0 md:mx-0 md:w-[123.9%] md:max-w-[983px] md:-translate-y-[40%]"
+          />
         </div>
       </div>
     </section>
