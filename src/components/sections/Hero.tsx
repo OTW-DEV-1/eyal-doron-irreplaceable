@@ -102,7 +102,7 @@ export function Hero() {
           <img
             src={asset('about-eyal.webp')}
             alt="ד״ר אייל דורון"
-            className="relative mx-auto block h-auto w-full max-w-[420px] md:absolute md:top-1/2 md:left-0 md:mx-0 md:w-[123.9%] md:max-w-[983px] md:-translate-y-[40%]"
+            className="relative mx-auto block h-auto w-full max-w-[420px] md:absolute md:top-1/2 md:left-0 md:mx-0 md:w-[99.1%] md:max-w-[786px] md:-translate-y-[40%]"
           />
         </div>
       </div>
