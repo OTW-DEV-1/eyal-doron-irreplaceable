@@ -15,7 +15,7 @@ export function Problem() {
         <div className="pointer-events-none absolute inset-0 z-0 opacity-50 sm:opacity-100">
           <Ghost className="top-[9%] right-[6%] text-[clamp(37px,4.4vw,66px)] [-webkit-text-stroke:1.3px_rgba(255,255,255,.22)]">AI</Ghost>
           <Ghost className="bottom-[4%] left-[8%] text-[clamp(35px,4.1vw,62px)] [-webkit-text-stroke:1.3px_rgba(255,255,255,.22)]">עתיד</Ghost>
-          <Ghost className="top-[54%] -left-[4%] -rotate-90 text-[clamp(31px,3.3vw,51px)] [-webkit-text-stroke:1.3px_rgba(255,255,255,.19)] sm:top-[44%] sm:left-[2%]">קריירה</Ghost>
+          <Ghost className="top-[30%] -left-[4%] -rotate-90 text-[clamp(31px,3.3vw,51px)] [-webkit-text-stroke:1.3px_rgba(255,255,255,.19)] sm:top-[44%] sm:left-[2%]">קריירה</Ghost>
           <Ghost className="right-[8%] bottom-[6%] -rotate-3 text-[clamp(33px,3.7vw,57px)] [-webkit-text-stroke:1.3px_rgba(255,255,255,.2)]">בינה מלאכותית</Ghost>
         </div>
         <div className="relative z-[2] mx-auto flex max-w-[1000px] flex-col items-center gap-[26px]">
@@ -26,11 +26,11 @@ export function Problem() {
           <p data-reveal className="-mt-[10px] max-w-[860px] text-[22.5px] leading-[1.2em] font-bold text-pretty text-white sm:text-[clamp(22px,2.6vw,32px)]">
             המציאות החדשה שלנו בשתי מילים:
           </p>
-          <div data-reveal className="-mt-[14px] self-center text-center">
-            <p className="hidden text-[22.5px] leading-[1.2em] font-bold text-white sm:block sm:text-[clamp(22px,2.6vw,32px)]">(בגדול)</p>
-            <div className="text-b2c pt-[.02em] pb-[.08em] text-[78px] leading-[0.8em] font-bold sm:text-[clamp(57.6px,9.9vw,135px)]">
-              אין לדעת.
-            </div>
+          <div
+            data-reveal
+            className="text-b2c -mt-[14px] self-center pt-[.02em] pb-[.08em] text-center text-[78px] leading-[0.8em] font-bold sm:text-[clamp(57.6px,9.9vw,135px)]"
+          >
+            אין לדעת.
           </div>
           <p data-reveal className="max-w-[900px] text-[24px] leading-[1.2em] font-normal text-pretty text-on-dark sm:text-[clamp(20px,2.55vw,29px)]">
             משבר רודף משבר, מגפה, מלחמה ובדרך ל...
