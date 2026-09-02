@@ -39,9 +39,6 @@ export function Problem() {
             <br />
             איך נשארים בלתי-ניתנים להחלפה בעולם שלא מפסיק לרוץ?
           </p>
-          <p data-reveal className="max-w-[900px] text-[24px] leading-[1.2em] font-bold text-pretty text-white sm:text-[clamp(20px,2.55vw,29px)]">
-            כי אם העולם מתהפך עלינו - הגיע הזמן להתהפך עליו בחזרה!
-          </p>
           <div data-reveal data-reveal-early className="mt-2">
             <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-11 sm:py-4 sm:text-[21.3px]">
               אני רוצה להתהפך עליו בחזרה!

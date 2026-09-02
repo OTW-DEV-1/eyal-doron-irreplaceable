@@ -5,6 +5,7 @@ import { CreativityStrip } from '@/components/sections/CreativityStrip'
 import { Logos } from '@/components/sections/Logos'
 import { IntroVideo } from '@/components/sections/IntroVideo'
 import { Problem } from '@/components/sections/Problem'
+import { Turn } from '@/components/sections/Turn'
 import { Gallery } from '@/components/sections/Gallery'
 import { Process } from '@/components/sections/Process'
 import { Benefits } from '@/components/sections/Benefits'
@@ -29,6 +30,7 @@ export default function Page() {
       <Logos />
       <IntroVideo />
       <Problem />
+      <Turn />
       <Gallery />
       <Process />
       <Benefits />
