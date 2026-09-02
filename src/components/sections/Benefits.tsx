@@ -59,7 +59,7 @@ export function Benefits() {
               </p>
             </div>
             <div className="hidden sm:block" />
-            <div className="pointer-events-none absolute -bottom-[154px] -left-[132px] h-[374px] w-[462px] rounded-full bg-[radial-gradient(circle,rgba(114,90,246,.13)_0%,rgba(246,199,96,.07)_45%,rgba(255,255,255,0)_74%)] blur-[6px]" />
+            <div className="pointer-events-none absolute -bottom-[154px] -left-[132px] h-[374px] w-[462px] rounded-full bg-[radial-gradient(circle,rgba(114,90,246,.22)_0%,rgba(246,199,96,.12)_45%,rgba(255,255,255,0)_74%)] blur-[6px]" />
           </div>
         ))}
       </div>

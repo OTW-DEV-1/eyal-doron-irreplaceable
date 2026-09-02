@@ -141,11 +141,11 @@
 /* Big outlined numerals (01, 02, …) that fade out downward. */
 @utility numeral-outline {
   color: transparent;
-  -webkit-text-stroke: 1.25px rgba(114, 90, 246, 0.35);
+  -webkit-text-stroke: 1.25px rgba(114, 90, 246, 0.5);
   letter-spacing: -0.02em;
   pointer-events: none;
-  /* A whisper of the brand spectrum inside the outlined digits. */
-  background-image: linear-gradient(135deg, rgba(114, 90, 246, 0.14), rgba(225, 88, 57, 0.14) 55%, rgba(246, 199, 96, 0.14));
+  /* A soft wash of the brand spectrum inside the outlined digits. */
+  background-image: linear-gradient(135deg, rgba(114, 90, 246, 0.28), rgba(225, 88, 57, 0.28) 55%, rgba(246, 199, 96, 0.28));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-mask-image: linear-gradient(180deg, #000 25%, transparent 95%);
