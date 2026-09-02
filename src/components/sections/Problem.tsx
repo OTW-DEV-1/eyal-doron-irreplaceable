@@ -37,10 +37,6 @@ export function Problem() {
             <br />
             משבר הבא.
             <br />
-            <span className="hidden sm:inline">
-              מה חייבים להבין?
-              <br />
-            </span>
             איך נשארים בלתי-ניתנים להחלפה בעולם שלא מפסיק לרוץ?
           </p>
           <p data-reveal className="max-w-[900px] text-[24px] leading-[1.2em] font-bold text-pretty text-white sm:text-[clamp(20px,2.55vw,29px)]">

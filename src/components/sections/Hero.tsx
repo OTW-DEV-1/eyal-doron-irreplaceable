@@ -60,7 +60,8 @@ export function Hero() {
             data-reveal
             className="mt-5 w-full max-w-full pb-[10px] text-[22.5px] leading-[1.1em] font-semibold text-pretty text-ink sm:mt-10 sm:w-auto sm:max-w-[945px] sm:pb-0 sm:text-[clamp(22.5px,2.97vw,33.7px)] sm:leading-[1.05em]"
           >
-            הקורס הדיגיטלי-פיזי החדש <span className="whitespace-nowrap">של ד״ר אייל דורון</span>
+            הקורס הדיגיטלי-פיזי החדש <br className="sm:hidden" />
+            <span className="whitespace-nowrap">של ד״ר אייל דורון</span>
           </p>
           <p
             data-reveal
