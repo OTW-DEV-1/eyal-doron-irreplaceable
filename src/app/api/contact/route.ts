@@ -71,8 +71,8 @@ export async function POST(req: Request) {
   // Prefer the URL the browser reported; fall back to the Referer header.
   const source = str(body.source, 2000) || str(req.headers.get('referer') ?? '', 2000)
 
-  // Every field is required (mirrors the `required` attributes on the form).
-  if (!fullname || !email || !phone || !message || !updates) {
+  // Mirrors the `required` attributes on the form; the message is optional there.
+  if (!fullname || !email || !phone || !updates) {
     return NextResponse.json({ error: 'missing_fields' }, { status: 400 })
   }
   if (!isEmail(email)) {

@@ -7,9 +7,19 @@ import { B2C_GRADIENT } from '@/components/ui'
 const FIELD =
   'rounded-[14px] border border-white/15 bg-white/5 p-[16px_18px] text-[22px] text-on-dark outline-none placeholder:text-white/85 focus:border-brand-gold sm:text-[24px]'
 
+const GENERIC_ERROR = 'משהו השתבש בשליחה. נסו שוב או כתבו לנו ישירות.'
+
+/** Error codes the /api/contact route returns, mapped to what the visitor should do about it. */
+const ERRORS: Record<string, string> = {
+  missing_fields: 'חסרים פרטים. מלאו שם, טלפון ואימייל ואשרו את הסימון.',
+  bad_email: 'כתובת האימייל לא תקינה. בדקו אותה ונסו שוב.',
+  rate_limited: 'נשלחו יותר מדי פניות. המתינו רגע ונסו שוב.',
+}
+
 /** Lead form on the dark panel. Submits to /api/contact. */
 export function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [error, setError] = useState(GENERIC_ERROR)
 
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -23,8 +33,19 @@ export function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...data, source: window.location.href }),
       })
-      setStatus(res.ok ? 'sent' : 'error')
+      if (res.ok) {
+        setStatus('sent')
+        return
+      }
+      // The route always answers with JSON, but never trust that over the wire.
+      const code = await res
+        .json()
+        .then((b: { error?: unknown }) => (typeof b.error === 'string' ? b.error : ''))
+        .catch(() => '')
+      setError(ERRORS[code] ?? GENERIC_ERROR)
+      setStatus('error')
     } catch {
+      setError(GENERIC_ERROR)
       setStatus('error')
     }
   }
@@ -75,7 +96,9 @@ export function Contact() {
               </button>
             </div>
             {status === 'error' && (
-              <p className="text-[18px] text-[#F6C760] sm:col-span-full">משהו השתבש בשליחה. נסו שוב או כתבו לנו ישירות.</p>
+              <p role="alert" className="text-[18px] text-[#F6C760] sm:col-span-full">
+                {error}
+              </p>
             )}
           </form>
         </div>
