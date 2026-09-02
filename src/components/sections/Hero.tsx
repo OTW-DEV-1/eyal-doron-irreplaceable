@@ -79,7 +79,7 @@ export function Hero() {
                 so it always sits below the CTA, right-aligned with it, at
                 every size - without adding column height that would shift the
                 portrait. The ring spins gently, the arrow floats inside. */}
-            <div className="hidden h-0 self-stretch md:block">
+            <div className="hidden h-0 self-stretch md:block [@media(max-height:800px)]:!hidden [@media(max-width:1100px)]:!hidden">
               <a href="#logos" className="relative mt-8 block aspect-square w-[clamp(112px,9.5vw,150px)]">
                 <img
                   src={asset('circle-badge.png')}
