@@ -32,13 +32,17 @@ export function Problem() {
           >
             אין לדעת.
           </div>
-          <p data-reveal className="max-w-[900px] text-[24px] leading-[1.2em] font-normal text-pretty text-on-dark sm:text-[clamp(20px,2.55vw,29px)]">
-            משבר. רודף משבר. רודף מגיפה. ועוד מלחמה.
+          <p data-reveal className="max-w-[900px] text-[24px] leading-[1.35em] font-normal text-pretty text-on-dark sm:text-[clamp(20px,2.55vw,29px)]">
+            משבר. רודף משבר. <br className="sm:hidden" />
+            רודף מגיפה. ועוד מלחמה.
             <br />
+            <br className="sm:hidden" />
+            <span className="text-[27.5px] font-bold sm:text-[clamp(23px,2.93vw,33.4px)]">בדרך למשבר הבא.</span>
+            <br />
+            <br className="sm:hidden" />
             <span className="text-[27.5px] sm:text-[clamp(23px,2.93vw,33.4px)]">
-              בדרך למשבר הבא.
-              <br />
-              איך נשארים בלתי-ניתנים להחלפה בעולם שלא מפסיק לרוץ?
+              איך נשארים בלתי-ניתנים להחלפה <br className="sm:hidden" />
+              בעולם שלא מפסיק לרוץ?
             </span>
           </p>
           <div data-reveal data-reveal-early className="mt-2">
