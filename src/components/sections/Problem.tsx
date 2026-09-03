@@ -33,15 +33,17 @@ export function Problem() {
             אין לדעת.
           </div>
           <p data-reveal className="max-w-[900px] text-[24px] leading-[1.2em] font-normal text-pretty text-on-dark sm:text-[clamp(20px,2.55vw,29px)]">
-            משבר רודף משבר, מגפה, מלחמה ובדרך ל...
+            משבר. רודף משבר. רודף מגיפה. ועוד מלחמה.
             <br />
-            משבר הבא.
-            <br />
-            איך נשארים בלתי-ניתנים להחלפה בעולם שלא מפסיק לרוץ?
+            <span className="text-[27.5px] sm:text-[clamp(23px,2.93vw,33.4px)]">
+              בדרך למשבר הבא.
+              <br />
+              איך נשארים בלתי-ניתנים להחלפה בעולם שלא מפסיק לרוץ?
+            </span>
           </p>
           <div data-reveal data-reveal-early className="mt-2">
             <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-11 sm:py-4 sm:text-[21.3px]">
-              אני רוצה להתהפך עליו בחזרה!
+              אני רוצה להצטרף
             </Cta>
           </div>
         </div>
