@@ -35,11 +35,9 @@ export function Problem() {
           <p data-reveal className="max-w-[900px] text-[24px] leading-[1.35em] font-normal text-pretty text-on-dark sm:text-[clamp(20px,2.55vw,29px)]">
             משבר. רודף משבר. <br className="sm:hidden" />
             רודף מגיפה. ועוד מלחמה.
-            <br />
-            <br className="sm:hidden" />
-            <span className="text-[27.5px] font-bold sm:text-[clamp(23px,2.93vw,33.4px)]">בדרך למשבר הבא.</span>
-            <br />
-            <br className="sm:hidden" />
+            <br className="hidden sm:inline" />
+            <span className="my-[7px] block text-[27.5px] font-bold sm:my-0 sm:inline sm:text-[clamp(23px,2.93vw,33.4px)]">בדרך למשבר הבא.</span>
+            <br className="hidden sm:inline" />
             <span className="text-[27.5px] sm:text-[clamp(23px,2.93vw,33.4px)]">
               איך נשארים בלתי-ניתנים להחלפה <br className="sm:hidden" />
               בעולם שלא מפסיק לרוץ?
