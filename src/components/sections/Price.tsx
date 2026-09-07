@@ -1,6 +1,6 @@
 import { asset } from '@/lib/assets'
 import { Aurora } from '@/components/reactbits/Aurora'
-import { CHECKOUT_URL, CARD, Cta, GradientIcon, ICONS } from '@/components/ui'
+import { CARD, Cta, GradientIcon, ICONS } from '@/components/ui'
 
 /** Price card with a running conic border, plus the book-bundle perk row. */
 export function Price() {
@@ -36,7 +36,7 @@ export function Price() {
             * העלות כוללת את כלל מרכיבי התהליך המפורטים בעמוד, לרבות הסדנה הפרונטלית המסכמת וגישה לקהילה ולאירועים.
           </p>
           <div className="mt-[30px] pt-[22px]">
-            <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[52px] sm:py-[17px] sm:text-[23px]">
+            <Cta href="#contact" className="px-[22px] py-3 text-[20.7px] sm:px-[52px] sm:py-[17px] sm:text-[23px]">
               להרשמה ויציאה לדרך
             </Cta>
           </div>

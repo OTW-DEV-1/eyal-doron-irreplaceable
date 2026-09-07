@@ -56,7 +56,7 @@ export function Contact() {
         <Aurora colors="#725AF6,#E15839,#F6C760" intensity={0.6} style={{ inset: 0 }} />
         <div className="relative z-[2] mx-auto max-w-[840px] text-center">
           <h2 data-reveal className="mb-11 pt-[.12em] pb-[.18em] text-[10.2vw] leading-[0.8em] font-bold text-white sm:text-[clamp(34px,6vw,76px)]">
-            יש לי עוד <span className="text-b2c">כמה תהיות...</span>
+            אני רוצה להירשם, <span className="text-b2c">תחזרו אליי!</span>
           </h2>
           <form
             data-reveal

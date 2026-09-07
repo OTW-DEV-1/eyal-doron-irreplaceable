@@ -166,7 +166,7 @@ export function Cta({ href, children, className = '', variant = 'solid' }: CtaPr
   )
 }
 
-/** Every CTA on the page leads straight to the course checkout. */
+/** Course checkout URL. CTAs currently point to the lead form (#contact) instead. */
 export const CHECKOUT_URL = 'https://eyaldoron-course.co.il/checkout/?add-to-cart=8845&quantity=1'
 
 /** The site's recurring light card: warm white gradient, hairline white border. */
