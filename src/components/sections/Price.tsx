@@ -28,12 +28,15 @@ export function Price() {
             עלות התהליך כולו*
           </h3>
           <div className="text-[26px] font-semibold text-ink-black sm:text-[clamp(24px,2.8vw,34px)]">מחיר השקה מיוחד</div>
-          <div className="text-b2c mt-[6px] py-[.08em] text-[64px] leading-none font-bold sm:text-[clamp(56px,8vw,110px)]">
-            1,200 ₪
+          <div className="text-b2c mt-[6px] py-[.08em] text-[46px] leading-none font-bold whitespace-nowrap sm:text-[clamp(56px,8vw,110px)]">
+            400 ש״ח * 3
           </div>
-          <div className="text-[clamp(19px,2vw,24px)] font-semibold text-ink-black">כולל מע״מ</div>
+          <div className="text-[clamp(19px,2vw,24px)] font-semibold text-ink-black">(סה״כ 1,200 ש״ח)</div>
           <p className="mx-auto mt-[18px] max-w-[760px] text-[22.5px] leading-[1.2em] text-pretty text-ink-black sm:text-[clamp(20px,2.55vw,29px)]">
             * העלות כוללת את כלל מרכיבי התהליך המפורטים בעמוד, לרבות הסדנה הפרונטלית המסכמת וגישה לקהילה ולאירועים.
+          </p>
+          <p className="mx-auto mt-[6px] max-w-[760px] text-[22.5px] leading-[1.2em] text-pretty text-ink-black sm:text-[clamp(20px,2.55vw,29px)]">
+            * ניתן לפרוס את התשלום למספר תשלומים
           </p>
           <div className="mt-[30px] pt-[22px]">
             <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[52px] sm:py-[17px] sm:text-[23px]">

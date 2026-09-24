@@ -56,8 +56,8 @@ const CARDS: { icon: keyof typeof ICONS; title: string; text: string; from: 'rig
   },
   {
     icon: 'people',
-    title: 'הזדמנות להצטרף לקהילת Creativity in Action',
-    text: 'שלא תאפשר לשגרה להשכיח את מה שחשוב באמת - להמשיך לקבל עדכונים ותובנות ולהרחיב את מעגל החיבורים והאפשרויות.',
+    title: 'הזדמנות להצטרף למועדון Creativity in Action',
+    text: 'שלא יאפשר לשגרה להשכיח את מה שחשוב באמת - להמשיך לקבל עדכונים ותובנות ולהרחיב את מעגל החיבורים והאפשרויות.',
     from: 'left',
   },
 ]
