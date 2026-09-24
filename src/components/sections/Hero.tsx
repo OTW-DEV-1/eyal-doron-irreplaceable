@@ -1,6 +1,6 @@
 import { asset } from '@/lib/assets'
 import { Aurora } from '@/components/reactbits/Aurora'
-import { Cta } from '@/components/ui'
+import { CHECKOUT_URL, Cta } from '@/components/ui'
 
 /**
  * Full-height opener.
@@ -71,7 +71,7 @@ export function Hero() {
           </p>
           <div data-reveal className="mt-0 flex flex-col items-center gap-[14px] pt-0 sm:mt-[1em] sm:items-start sm:pt-[0.5em]">
             <div className="mt-[18px] mb-[15px] flex w-full flex-wrap items-center justify-center gap-4 sm:mt-7 sm:mb-0 sm:w-auto sm:justify-start">
-              <Cta href="#contact" className="px-[22px] py-3 text-[20.7px] sm:px-[53px] sm:py-[20px] sm:text-[30px]">
+              <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[53px] sm:py-[20px] sm:text-[30px]">
                 אני רוצה לצאת לדרך!
               </Cta>
             </div>

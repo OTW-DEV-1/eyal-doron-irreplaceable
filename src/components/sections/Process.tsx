@@ -1,5 +1,5 @@
 import { Aurora } from '@/components/reactbits/Aurora'
-import { Cta } from '@/components/ui'
+import { CHECKOUT_URL, Cta } from '@/components/ui'
 
 /** Dark panel where Dr. Doron pitches the process in his own voice. */
 export function Process() {
@@ -31,7 +31,7 @@ export function Process() {
             בואו לחשוב אחרת, ביחד.
           </p>
           <div data-reveal data-reveal-early className="mt-[30px] text-center">
-            <Cta href="#contact" className="px-[22px] py-3 text-[20.7px] sm:px-[38px] sm:py-4 sm:text-[21.3px]">
+            <Cta href={CHECKOUT_URL} className="px-[22px] py-3 text-[20.7px] sm:px-[38px] sm:py-4 sm:text-[21.3px]">
               אני בפנים!
             </Cta>
           </div>

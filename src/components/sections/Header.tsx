@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { asset } from '@/lib/assets'
-import { B2C_GRADIENT } from '@/components/ui'
+import { CHECKOUT_URL, B2C_GRADIENT } from '@/components/ui'
 
 const LINKS = [
   { href: '#journey', label: 'התהליך' },
@@ -41,7 +41,9 @@ export function Header() {
           ))}
         </nav>
         <a
-          href="#contact"
+          href={CHECKOUT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           data-magnet
           className={`${B2C_GRADIENT} go_to_checkout inline-block rounded-full px-[14px] py-[6px] text-[15px] font-semibold text-white transition-[filter,transform] duration-300 hover:text-white hover:brightness-110 sm:justify-self-end sm:px-[26px] sm:py-3 sm:text-[19.4px]`}
         >
@@ -75,7 +77,9 @@ export function Header() {
           </a>
         ))}
         <a
-          href="#contact"
+          href={CHECKOUT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={close}
           className={`${B2C_GRADIENT} go_to_checkout mt-auto rounded-full px-[26px] py-[13px] text-center text-[18px] font-semibold text-white`}
         >
