@@ -29,7 +29,7 @@ export function Price() {
           </h3>
           <div className="text-[26px] font-semibold text-ink-black sm:text-[clamp(24px,2.8vw,34px)]">מחיר השקה מיוחד</div>
           <div className="text-b2c mt-[6px] py-[.08em] text-[46px] leading-none font-bold whitespace-nowrap sm:text-[clamp(56px,8vw,110px)]">
-            400 ש״ח * 3
+            400 ₪ * 3
           </div>
           <div className="text-[clamp(19px,2vw,24px)] font-semibold text-ink-black">(סה״כ 1,200 ש״ח)</div>
           <p className="mx-auto mt-[18px] max-w-[760px] text-[22.5px] leading-[1.2em] text-pretty text-ink-black sm:text-[clamp(20px,2.55vw,29px)]">
